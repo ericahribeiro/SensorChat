@@ -1,0 +1,10 @@
+# Tutor de artigos (RAG)
+pymupdf
+numpy
+sentence-transformers
+
+# Banca (servidor + agentes)
+fastapi
+uvicorn
+openai            # SDK usado para falar com a API da Xiaomi (formato compatível)
+python-dotenv     # lê a chave do .env, para nunca escrevê-la no código

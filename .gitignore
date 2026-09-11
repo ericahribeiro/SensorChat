@@ -1,0 +1,11 @@
+.venv/
+.idea/
+__pycache__/
+*.pyc
+ata.json
+publico/
+base_*.npz
+base_*.json
+pdfs_artigos/
+pdfs_livros/
+.env
