@@ -1,0 +1,4639 @@
+{
+ "nos": {
+  "agachamento-squat": {
+   "nome": "agachamento (squat)",
+   "tipo": "exercicio",
+   "descricao": "Tarefa de movimento executada em quatro repetições a diferentes porcentagens de carga máxima (1RM).",
+   "apelidos": [
+    "agachamento"
+   ],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "variabilidade-linear": {
+   "nome": "variabilidade linear",
+   "tipo": "conceito",
+   "descricao": "Medida extraída dos sinais de aceleração, representada pelo desvio padrão (SD).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "complexidade-do-movimento": {
+   "nome": "complexidade do movimento",
+   "tipo": "conceito",
+   "descricao": "Propriedade dos sinais avaliada por métricas não lineares como DFA, FuzzyEn e SampEn.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "unidade-de-medicao-inercial-imu": {
+   "nome": "unidade de medição inercial (IMU)",
+   "tipo": "dispositivo",
+   "descricao": "Sensor inercial posicionado na região lombar (entre L3-L5) para capturar acelerações do movimento.",
+   "apelidos": [
+    "unidade de medição inercial (imu)",
+    "sensor inercial (IMU)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "plataforma-de-forcas": {
+   "nome": "plataforma de forças",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo que mede a força de reação do solo durante o agachamento.",
+   "apelidos": [
+    "plataforma de força"
+   ],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "desvio-padrao-sd": {
+   "nome": "desvio padrão (SD)",
+   "tipo": "metrica",
+   "descricao": "Métrica de variabilidade linear extraída dos sinais de aceleração.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "analise-de-flutuacao-destendenciada-dfa": {
+   "nome": "análise de flutuação destendenciada (DFA)",
+   "tipo": "metodo",
+   "descricao": "Métrica não linear para avaliar a estrutura de autocorrelação dos sinais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "entropia-difusa-fuzzyen": {
+   "nome": "entropia difusa (FuzzyEn)",
+   "tipo": "metodo",
+   "descricao": "Métrica não linear que quantifica a complexidade dos sinais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "entropia-amostral-sampen": {
+   "nome": "entropia amostral (SampEn)",
+   "tipo": "metodo",
+   "descricao": "Métrica não linear para medir a regularidade e complexidade dos sinais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-propulsiva-media": {
+   "nome": "velocidade propulsiva média",
+   "tipo": "grandeza",
+   "descricao": "Variável monitorada por um encoder linear (T-Force System) para controle do 1RM e das repetições.",
+   "apelidos": [
+    "velocidade média propulsiva (MPV)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "carga-maxima-1rm": {
+   "nome": "carga máxima (1RM)",
+   "tipo": "grandeza",
+   "descricao": "Referência para definir as cargas relativas (10%, 30%, 50%, 70%, 90%) utilizadas no estudo.",
+   "apelidos": [
+    "força máxima (1RM)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "reconhecimento-de-atividades-humanas-har": {
+   "nome": "reconhecimento de atividades humanas (HAR)",
+   "tipo": "conceito",
+   "descricao": "Área de estudo que visa identificar ações humanas a partir de dados de sensores.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "deep-learning-dl": {
+   "nome": "deep learning (DL)",
+   "tipo": "metodo",
+   "descricao": "Conjunto de algoritmos de aprendizado de máquina com redes neurais profundas para extração de características.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "autoencoder": {
+   "nome": "autoencoder",
+   "tipo": "conceito",
+   "descricao": "Arquitetura de DL útil para extração de características não supervisionada e redução de dimensionalidade.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "redes-profundas-de-crenca-dbns": {
+   "nome": "redes profundas de crença (DBNs)",
+   "tipo": "conceito",
+   "descricao": "Modelo de DL destacado por sua capacidade de aprendizado não supervisionado.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-neural-convolucional-cnn": {
+   "nome": "rede neural convolucional (CNN)",
+   "tipo": "conceito",
+   "descricao": "Arquitetura de DL para processar dados de múltiplos sensores inerciais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-neural-recorrente-rnn": {
+   "nome": "rede neural recorrente (RNN)",
+   "tipo": "conceito",
+   "descricao": "Modelo de DL explorado para capturar dependências temporais em séries de sensores.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aprendizado-por-reforco-rl": {
+   "nome": "aprendizado por reforço (RL)",
+   "tipo": "metodo",
+   "descricao": "Abordagem de DL que demonstrou 97,7% de acurácia no reconhecimento de atividades.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "acuracia": {
+   "nome": "acurácia",
+   "tipo": "metrica",
+   "descricao": "Métrica de avaliação que variou de 75,6% a 98,23% nos diferentes modelos estudados.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rotulacao-de-dados": {
+   "nome": "rotulação de dados",
+   "tipo": "metodo",
+   "descricao": "Processo que apresenta dificuldade anotar séries temporais de sensores para treino.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aprendizado-de-transferencia": {
+   "nome": "aprendizado de transferência",
+   "tipo": "metodo",
+   "descricao": "Técnica futura para melhorar generalização entre domínios como usuários e sensores.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "segmentacao-estatica": {
+   "nome": "segmentação estática",
+   "tipo": "metodo",
+   "descricao": "Abordagem que pode capturar janelas de tempo inadequadas para análise.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-neural-convolucional-dilatada-dilated-cnn": {
+   "nome": "rede neural convolucional dilatada (Dilated CNN)",
+   "tipo": "dispositivo",
+   "descricao": "Rede neural utilizada para estimar a orientação de forma dead reckoning a partir de sinais de IMU.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "giroscopio": {
+   "nome": "giroscópio",
+   "tipo": "dispositivo",
+   "descricao": "Sensor da IMU que fornece incrementos de orientação para integração.",
+   "apelidos": [
+    "giroscópio (gyroscope)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "acelerometro": {
+   "nome": "acelerômetro",
+   "tipo": "dispositivo",
+   "descricao": "Sensor da IMU cuja ablação aumenta os erros de orientação em 50% em termos de ROE.",
+   "apelidos": [
+    "acelerômetro (accelerometer)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "orientacao-atitude": {
+   "nome": "orientação (atitude)",
+   "tipo": "grandeza",
+   "descricao": "Grandeza estimada pelo método de forma dead reckoning a partir de medidas do giroscópio.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "deriva-drift": {
+   "nome": "deriva (drift)",
+   "tipo": "fenomeno",
+   "descricao": "Desvio acumulado das estimativas de orientação da verdade real.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "vies-bias": {
+   "nome": "viés (bias)",
+   "tipo": "grandeza",
+   "descricao": "Termo do modelo do sensor IMU que é corrigido pela rede neural.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "correcao-de-giroscopio-n": {
+   "nome": "correção de giroscópio (˜ωn)",
+   "tipo": "metodo",
+   "descricao": "Saída da rede neural com amplitude da ordem de 1 deg/s que melhora drasticamente as estimativas.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "perda-huber": {
+   "nome": "perda Huber",
+   "tipo": "metrica",
+   "descricao": "Função de perda com parâmetro 0.005 usada para treinamento, robusta a outliers.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-de-orientacao-roe": {
+   "nome": "erro de orientação (ROE)",
+   "tipo": "metrica",
+   "descricao": "Métrica de desempenho que o método proposto divide por pelo menos um fator 2.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "odometria-visual-inercial-vio": {
+   "nome": "odometria visual-inercial (VIO)",
+   "tipo": "metodo",
+   "descricao": "Método que utiliza sensores visuais e inerciais, com o qual o método proposto é competitivo.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "processamento-dead-reckoning": {
+   "nome": "processamento dead reckoning",
+   "tipo": "metodo",
+   "descricao": "Estimativa de orientação baseada apenas na integração de medidas do giroscópio sem referência externa.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ultrawideband-uwb": {
+   "nome": "ultrawideband (UWB)",
+   "tipo": "dispositivo",
+   "descricao": "Tecnologia de localização sem fio que utiliza sinais de banda larga ultra-estreita para medir distâncias.",
+   "apelidos": [
+    "rádio de banda ultra-larga (UWB)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-vestivel": {
+   "nome": "sensor vestível",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo de sensoriamento que pode ser usado no corpo humano para localização.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-de-distancia-medio": {
+   "nome": "erro de distância médio",
+   "tipo": "metrica",
+   "descricao": "Média das diferenças entre a distância medida e a real.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-percentil-90": {
+   "nome": "erro percentil 90",
+   "tipo": "metrica",
+   "descricao": "Valor abaixo do qual 90% dos erros de localização se encontram.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "area-de-sombra-corporal": {
+   "nome": "área de sombra corporal",
+   "tipo": "fenomeno",
+   "descricao": "Região do corpo que bloqueia o sinal de rádio, causando erros de medição.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "nao-linha-de-visada-nlos": {
+   "nome": "não linha de visada (NLOS)",
+   "tipo": "fenomeno",
+   "descricao": "Condição em que o caminho direto entre o transmissor e o receptor está obstruído.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "difracao": {
+   "nome": "difração",
+   "tipo": "fenomeno",
+   "descricao": "Comportamento predominante do sinal ao redor da cabeça, resultando em melhor desempenho.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtro-de-kalman-estendido-ekf": {
+   "nome": "filtro de kalman estendido (EKF)",
+   "tipo": "metodo",
+   "descricao": "Algoritmo de fusão de sensores utilizado para estimar a posição.",
+   "apelidos": [
+    "filtro de Kalman estendido (EKF)",
+    "filtro de Kalman estendido"
+   ],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "mitigacao-do-sombreamento-corporal": {
+   "nome": "mitigação do sombreamento corporal",
+   "tipo": "metodo",
+   "descricao": "Técnicas propostas para reduzir erros causados pelo bloqueio do sinal pelo corpo.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "testa": {
+   "nome": "testa",
+   "tipo": "segmento_corporal",
+   "descricao": "Posição de sensor que apresentou o melhor desempenho de localização.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "peito": {
+   "nome": "peito",
+   "tipo": "segmento_corporal",
+   "descricao": "Posição de sensor que apresentou o pior desempenho devido à grande área de sombra.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aprendizado-profundo-deep-learning": {
+   "nome": "aprendizado profundo (deep learning)",
+   "tipo": "metodo",
+   "descricao": "Conjunto de métodos de machine learning baseados em redes neurais artificiais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fusao-de-sensores": {
+   "nome": "fusão de sensores",
+   "tipo": "metodo",
+   "descricao": "Processo de integrar dados de múltiplos sensores para melhorar estimativas.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "navegacao-inercial": {
+   "nome": "navegação inercial",
+   "tipo": "conceito",
+   "descricao": "Técnica de navegação que utiliza medições de sensores inerciais para estimar posição e orientação.",
+   "apelidos": [
+    "navegação inercial strapdown"
+   ],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "calibracao": {
+   "nome": "calibração",
+   "tipo": "metodo",
+   "descricao": "Processo de ajustar e corrigir erros sistemáticos nos sensores.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "eliminacao-de-ruido-denoising": {
+   "nome": "eliminação de ruído (denoising)",
+   "tipo": "metodo",
+   "descricao": "Processo de filtrar e remover ruídos dos sinais dos sensores.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-neural-longo-curto-prazo-lstm": {
+   "nome": "rede neural longo-curto prazo (LSTM)",
+   "tipo": "conceito",
+   "descricao": "Tipo de RNN que modela dependências de longo prazo em sequências.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "transformer": {
+   "nome": "transformer",
+   "tipo": "conceito",
+   "descricao": "Arquitetura de modelo de aprendizado profundo baseada em mecanismos de atenção.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "covariancia-de-ruido": {
+   "nome": "covariância de ruído",
+   "tipo": "metrica",
+   "descricao": "Parâmetro de filtro que quantifica a incerteza no modelo de processo e nas medições.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erros-do-imu": {
+   "nome": "erros do IMU",
+   "tipo": "fenomeno",
+   "descricao": "Desvios nas medições de um sensor inercial que afetam a precisão da navegação.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "captura-de-movimento": {
+   "nome": "captura de movimento",
+   "tipo": "metodo",
+   "descricao": "Aplicação mais comum dos sensores inerciais, presente em 33,5% dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "analise-da-marcha": {
+   "nome": "análise da marcha",
+   "tipo": "metodo",
+   "descricao": "Aplicação de sensores inerciais presente em 19,1% dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "avaliacao-clinica": {
+   "nome": "avaliação clínica",
+   "tipo": "metodo",
+   "descricao": "Aplicação de sensores inerciais presente em 14,5% dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "parametros-cinematicos-3d": {
+   "nome": "parâmetros cinemáticos 3D",
+   "tipo": "grandeza",
+   "descricao": "Objetivo de estimativa em 72,4% dos trabalhos revisados.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "articulacao-do-quadril": {
+   "nome": "articulação do quadril",
+   "tipo": "segmento_corporal",
+   "descricao": "Articulação dos membros inferiores focada na maioria dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "articulacao-do-joelho": {
+   "nome": "articulação do joelho",
+   "tipo": "segmento_corporal",
+   "descricao": "Articulação dos membros inferiores focada na maioria dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "articulacao-do-tornozelo": {
+   "nome": "articulação do tornozelo",
+   "tipo": "segmento_corporal",
+   "descricao": "Articulação dos membros inferiores focada na maioria dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtro-de-kalman": {
+   "nome": "filtro de Kalman",
+   "tipo": "conceito",
+   "descricao": "Algoritmo de fusão sensorial mais frequentemente utilizado para processar dados de IMUs.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "tecnica-de-aprendizado-de-maquina-ml": {
+   "nome": "técnica de aprendizado de máquina (ML)",
+   "tipo": "metodo",
+   "descricao": "Algoritmo que aumentou de 4 para 18 artigos e apresentou leve melhoria na precisão.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-quadratico-medio-rmse": {
+   "nome": "erro quadrático médio (RMSE)",
+   "tipo": "metrica",
+   "descricao": "Métrica de validação comum, variando entre 2,24° e 7,80° para métodos clássicos.",
+   "apelidos": [
+    "erro de trajetória (rmse)",
+    "erro quadrático médio (esq)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "participantes-saudaveis": {
+   "nome": "participantes saudáveis",
+   "tipo": "conceito",
+   "descricao": "Grupo predominante para validação dos estudos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ail-ke-activity-in-the-loop-kinematics-estimator": {
+   "nome": "ail-ke (activity-in-the-loop kinematics estimator)",
+   "tipo": "conceito",
+   "descricao": "um modelo de aprendizado profundo que usa classificação de atividade para melhorar a estimação de cinemática com apenas dois imus.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "classificador-de-atividade-ac": {
+   "nome": "classificador de atividade (ac)",
+   "tipo": "conceito",
+   "descricao": "componente do ail-ke que classifica o exercício sendo realizado com 99.6% de acurácia.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "regressor-de-cinematica-kr": {
+   "nome": "regressor de cinemática (kr)",
+   "tipo": "conceito",
+   "descricao": "componente do ail-ke que estima a cinemática a partir dos dados dos imus.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-de-agregacao-de-caracteristicas-fan": {
+   "nome": "rede de agregação de características (fan)",
+   "tipo": "conceito",
+   "descricao": "componente do ail-ke que conecta a informação de classificação ao regressor.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "exercicio-de-forca": {
+   "nome": "exercício de força",
+   "tipo": "exercicio",
+   "descricao": "atividade física avaliada com o modelo, classificada com alta acurácia entre 11 tipos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "simulacao-de-trabalho-industrial": {
+   "nome": "simulação de trabalho industrial",
+   "tipo": "exercicio",
+   "descricao": "cenário de avaliação com 3 imus para estimação de ângulos articulares do ombro.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-no-supino": {
+   "nome": "velocidade no supino",
+   "tipo": "grandeza",
+   "descricao": "variável cinemática medida, com correlação forte (r=0.81) com o ground truth.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ombro": {
+   "nome": "ombro",
+   "tipo": "segmento_corporal",
+   "descricao": "articulação para a qual o ail-ke estimou ângulos com RMSE médio de 6.5° na simulação industrial.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ground-truth-sistema-de-captura-de-movimento-optico": {
+   "nome": "ground truth (sistema de captura de movimento óptico)",
+   "tipo": "dispositivo",
+   "descricao": "sistema de referência para validação das estimativas de velocidade e cinemática.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtro-hibrido-hybrid": {
+   "nome": "filtro híbrido (Hybrid)",
+   "tipo": "conceito",
+   "descricao": "Modelo que combina CNN 1D ResNet-18 para extração de características espaciais com BLSTM para rastrear relacionamentos temporais, seguido por um filtro de Kalman linear para pós-processamento.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-absoluto-medio-mae": {
+   "nome": "erro absoluto médio (MAE)",
+   "tipo": "metrica",
+   "descricao": "Métrica de precisão de 0,25 m/s alcançada pelo método Hybrid no conjunto de teste V1.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "janela-deslizante": {
+   "nome": "janela deslizante",
+   "tipo": "metodo",
+   "descricao": "Técnica de pré-processamento com tamanho 128 a 100 Hz e sobreposição de 50% para segmentar os dados.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtro-de-kalman-linear-lkf": {
+   "nome": "filtro de Kalman linear (LKF)",
+   "tipo": "conceito",
+   "descricao": "Algoritmo de pós-processamento que melhorou a precisão de todos os métodos em média 145% no V1.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aceleracao-livre-de-gravidade": {
+   "nome": "aceleração livre de gravidade",
+   "tipo": "grandeza",
+   "descricao": "Magnitude da aceleração utilizada como uma das duas entradas para o modelo de regressão.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "taxa-angular": {
+   "nome": "taxa angular",
+   "tipo": "grandeza",
+   "descricao": "Magnitude utilizada como uma das duas entradas para o modelo de regressão, complementando a aceleração.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "validacao-cruzada-por-sujeitos-left-outs": {
+   "nome": "validação cruzada por sujeitos (left-outs)",
+   "tipo": "metodo",
+   "descricao": "Protocolo de validação onde o modelo é testado em usuários não vistos durante o treino, demonstrando a generalização do Hybrid.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-de-distancia-percorrida-det": {
+   "nome": "erro de distância percorrida (DET)",
+   "tipo": "metrica",
+   "descricao": "Erro mantido abaixo de 12 m em média pelo Hybrid, demonstrando sua capacidade de estimar a distância total.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "problema-de-regressao": {
+   "nome": "problema de regressão",
+   "tipo": "conceito",
+   "descricao": "Formulação do objetivo do modelo para estimar a velocidade a partir das entradas inerciais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "caminhada": {
+   "nome": "caminhada",
+   "tipo": "exercicio",
+   "descricao": "Um dos movimentos, junto com parado, corrida e movimentos aleatórios, para os quais o método proposto é aplicável.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-de-velocidade": {
+   "nome": "sensor de velocidade",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo para medição de velocidade durante exercícios de força.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sistema-lpt": {
+   "nome": "sistema LPT",
+   "tipo": "dispositivo",
+   "descricao": "Sistema que demonstra estimativas mais consistentes com ICC de 0,87–0,98 e r de 0,77–0,99.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "validade": {
+   "nome": "validade",
+   "tipo": "metrica",
+   "descricao": "Alta validade relativa agrupada para sensores de velocidade (ICC = 0,91, r = 0,95).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "concordancia-entre-dispositivos": {
+   "nome": "concordância entre dispositivos",
+   "tipo": "metrica",
+   "descricao": "Métrica influenciada pelo tipo de sensor, variável de velocidade e intensidade.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "confiabilidade-intradia": {
+   "nome": "confiabilidade intradia",
+   "tipo": "metrica",
+   "descricao": "Boa a excelente com ICC de 0,91 [0,87–0,95], mas com variabilidade ampla.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "confiabilidade-interdias": {
+   "nome": "confiabilidade interdias",
+   "tipo": "metrica",
+   "descricao": "Alta com ICC de 0,90 [0,85–0,93].",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-absoluto": {
+   "nome": "erro absoluto",
+   "tipo": "metrica",
+   "descricao": "Análise reportada em oito estudos, com CV variando de 1,22 a 54,9%.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "limite-de-concordancia-loa": {
+   "nome": "limite de concordância (LoA)",
+   "tipo": "metrica",
+   "descricao": "Práticos para o sensor Tendo vs captura de movimento 3D de −0,141 a 0,099 m·s⁻¹.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "modelo-de-predicao-de-1rm": {
+   "nome": "modelo de predição de 1RM",
+   "tipo": "conceito",
+   "descricao": "Validade relativa agrupada alta (r = 0,96 [0,94–0,97]) para predição de repetição máxima.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "exercicio-de-agachamento": {
+   "nome": "exercício de agachamento",
+   "tipo": "exercicio",
+   "descricao": "Demonstra validade inferior (r = 0,37–0,99) para modelos de predição de 1RM.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "exercicio-de-levantamento-terra": {
+   "nome": "exercício de levantamento terra",
+   "tipo": "exercicio",
+   "descricao": "Demonstra validade inferior (r = 0,60–0,98) para modelos de predição de 1RM.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "magnetometro-magnetometer": {
+   "nome": "magnetômetro (magnetometer)",
+   "tipo": "dispositivo",
+   "descricao": "Sensor que corrige o desvio do ângulo de orientação causado pela deriva do giroscópio.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "amplitude-de-movimento-articular": {
+   "nome": "amplitude de movimento articular",
+   "tipo": "metrica",
+   "descricao": "Faixa de rotação de articulações que diminui com a idade, especialmente nos joelhos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "flexao-do-tronco": {
+   "nome": "flexão do tronco",
+   "tipo": "exercicio",
+   "descricao": "Movimento que alcança amplitude de 100°, parte da decomposição postural do tronco.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-de-inclinacao-tilt-sensor": {
+   "nome": "sensor de inclinação (tilt sensor)",
+   "tipo": "dispositivo",
+   "descricao": "Combinação de acelerômetro e giroscópio que mede inclinação do sistema, usado em monitoramento de marcha com erro de 0,75%.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-flexivel-textil": {
+   "nome": "sensor flexível têxtil",
+   "tipo": "dispositivo",
+   "descricao": "Membrana de microfibra que suporta deformação de até 2000% e possui permeabilidade superior a 90% do algodão.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-de-pressao-flexivel": {
+   "nome": "sensor de pressão flexível",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo com faixa de medição superior a 10 kPa usado para monitoramento de movimentos dos dedos e marcha.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "reconhecimento-de-postura": {
+   "nome": "reconhecimento de postura",
+   "tipo": "metodo",
+   "descricao": "Processo de decompor postura corporal em ângulos de rotação de tronco, cabeça e membros usando sensores vestíveis.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "monitoramento-de-marcha": {
+   "nome": "monitoramento de marcha",
+   "tipo": "metodo",
+   "descricao": "Aplicação que utiliza sensores em tornozelo, coxa e panturrilha para avaliar movimento durante reabilitação.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "dispositivo-para-monitorar-treino-de-resistencia": {
+   "nome": "dispositivo para monitorar treino de resistência",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo avaliado para monitorar a precisão do treino de resistência.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "transdutor-linear-lpt": {
+   "nome": "transdutor linear (LPT)",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo como o GymAware e o T-Force que demonstra maior exatidão em comparação com acelerômetros.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sistema-de-captura-de-movimento-3d": {
+   "nome": "sistema de captura de movimento 3D",
+   "tipo": "dispositivo",
+   "descricao": "Padrão-ouro para validar a precisão dos dispositivos de monitoramento.",
+   "apelidos": [
+    "sistema de captura de movimento 3D (Vicon)"
+   ],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-media-concentrica": {
+   "nome": "velocidade média concêntrica",
+   "tipo": "metrica",
+   "descricao": "Variável mais investigada na maioria dos dispositivos.",
+   "apelidos": [
+    "velocidade média concêntrica (MCV)"
+   ],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "precisao": {
+   "nome": "precisão",
+   "tipo": "metrica",
+   "descricao": "Achado principal da revisão, avaliada por correlação, coeficiente de variação e tamanho do efeito.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "confiabilidade-intra-dispositivo": {
+   "nome": "confiabilidade intra-dispositivo",
+   "tipo": "metrica",
+   "descricao": "Medida de reproducibilidade analisada nos estudos, avaliada por ICC, coeficiente de variação e viés médio padronizado.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "exercicio-balistico": {
+   "nome": "exercício balístico",
+   "tipo": "exercicio",
+   "descricao": "Tipo de exercício para o qual acelerômetros são mais adequados para feedback motivacional.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "agachamento-livre": {
+   "nome": "agachamento livre",
+   "tipo": "exercicio",
+   "descricao": "Exercício específico mencionado no qual o GymAware apresentou R²=0,95.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "validade-aceitavel": {
+   "nome": "validade aceitável",
+   "tipo": "metodo",
+   "descricao": "Critérios definidos como correlação >0,70, coeficiente de variação <10% e tamanho do efeito <0,60.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-do-dispositivo": {
+   "nome": "erro do dispositivo",
+   "tipo": "fenomeno",
+   "descricao": "Ponto importante de que a maioria dos estudos não separou a variação tecnológica da variação biológica.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ultra-inertial-poser-uip": {
+   "nome": "ultra inertial poser (UIP)",
+   "tipo": "metodo",
+   "descricao": "Sistema para rastreamento de pose corporal 3D usando 6 sensores vestíveis.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "jitter": {
+   "nome": "jitter",
+   "tipo": "metrica",
+   "descricao": "Flutuação de alta frequência no sinal, reduzida em 80% pelo UIP.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-de-atencao-por-convolucao-grafica-de-distancia-da-gcn": {
+   "nome": "rede de atenção por convolução gráfica de distância (DA-GCN)",
+   "tipo": "metodo",
+   "descricao": "Rede neural que modela sensores como grafo com arestas de distâncias UWB.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "parametros-smpl": {
+   "nome": "parâmetros SMPL",
+   "tipo": "conceito",
+   "descricao": "Parâmetros do modelo corporal estimados para a pose 3D.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-de-orientacao-de-segmentos-sip": {
+   "nome": "erro de orientação de segmentos (SIP)",
+   "tipo": "metrica",
+   "descricao": "Métrica de erro de orientação, 20% menor no UIP que no PIP.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "dataset-uip-db": {
+   "nome": "dataset UIP-DB",
+   "tipo": "conceito",
+   "descricao": "Conjunto de dados com 200 minutos de gravações de 6 participantes para validação.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "perda-de-precisao-por-temperatura": {
+   "nome": "perda de precisão por temperatura",
+   "tipo": "fenomeno",
+   "descricao": "Variação de temperatura afeta precisão UWB em 2.15 mm/°C.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erros-de-ruido-nlos": {
+   "nome": "erros de ruído NLOS",
+   "tipo": "metrica",
+   "descricao": "Parâmetros σ₀ = 0.051 m (LOS) e σ₁ = 0.083 m (NLOS com pessoa como obstáculo).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-media-vmean": {
+   "nome": "velocidade média (vmean)",
+   "tipo": "metrica",
+   "descricao": "Velocidade média da barra durante uma repetição, medida em m/s.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-de-pico-vpeak": {
+   "nome": "velocidade de pico (vpeak)",
+   "tipo": "metrica",
+   "descricao": "Velocidade máxima atingida pela barra durante uma repetição, medida em m/s.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "coeficiente-de-correlacao-de-pearson-r": {
+   "nome": "coeficiente de correlação de Pearson (r)",
+   "tipo": "metrica",
+   "descricao": "Métrica estatística usada para determinar a precisão dos dispositivos.",
+   "apelidos": [
+    "coeficiente de correlação (r)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "erro-padrao-de-estimativa-see": {
+   "nome": "erro padrão de estimativa (SEE)",
+   "tipo": "metrica",
+   "descricao": "Métrica usada para determinar a precisão, com valores como 0,135 m/s.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "gymaware": {
+   "nome": "GymAware",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo de VBT móvel que mostrou a maior precisão geral, com SEE muito baixos para o agachamento.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "1080-quantum": {
+   "nome": "1080 Quantum",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo de VBT estacionário que exibiu excelente precisão, superando os móveis na medição de vpeak.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "vmaxpro": {
+   "nome": "Vmaxpro",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo de VBT móvel e IMU, o mais barato, que ficou em segundo lugar na precisão geral.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "hang-power-snatch": {
+   "nome": "hang power snatch",
+   "tipo": "exercicio",
+   "descricao": "Exercício de peso livre para o qual os dispositivos mostraram tendências de subestimação de vmean.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "efeito-do-ponto-de-fixacao-na-barra": {
+   "nome": "efeito do ponto de fixação na barra",
+   "tipo": "fenomeno",
+   "descricao": "Variação na medição de velocidade entre o meio da barra e suas extremidades, com SEE de até 0,06 m/s.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fase-concentrica": {
+   "nome": "fase concêntrica",
+   "tipo": "grandeza",
+   "descricao": "Fase do movimento cuja identificação é difícil e causa subestimação de vmean no hang power snatch.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-da-barra": {
+   "nome": "velocidade da barra",
+   "tipo": "grandeza",
+   "descricao": "Parâmetro biomecânico estimado por sensores inerciais em exercícios de força.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "confiabilidade": {
+   "nome": "confiabilidade",
+   "tipo": "metrica",
+   "descricao": "Consistência dos resultados de medição de um dispositivo em repetições.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "coeficiente-de-variacao-cv": {
+   "nome": "coeficiente de variação (CV)",
+   "tipo": "metrica",
+   "descricao": "Medida de variabilidade dos dados, variando de 2,1% a 36,5% para o Myotest.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "coeficiente-de-correlacao-intraclasse-icc": {
+   "nome": "coeficiente de correlação intraclasse (ICC)",
+   "tipo": "metrica",
+   "descricao": "Medida de concordância entre medições, com valores baixos entre 0,273 e 0,451 para o Barsensei.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "salto-com-contramovimento": {
+   "nome": "salto com contramovimento",
+   "tipo": "exercicio",
+   "descricao": "Exercício pliométrico para o qual a validade de IMUs foi testada.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "padrao-ouro": {
+   "nome": "padrão-ouro",
+   "tipo": "conceito",
+   "descricao": "Método de referência para validação, como transdutores lineares e sistemas de captura de movimento 3D.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-mems": {
+   "nome": "sensor MEMS",
+   "tipo": "dispositivo",
+   "descricao": "Sensor inercial barato e pequeno, com ruído de alta frequência que pode não ser atenuado em referencial rotativo se o IMU estiver em rotação.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sistema-de-coordenadas-local-de-navegacao-ned": {
+   "nome": "sistema de coordenadas local de navegação (NED)",
+   "tipo": "conceito",
+   "descricao": "Sistema de coordenadas definido como Norte, Leste e Para Baixo.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "alinhamento-e-calibracao": {
+   "nome": "alinhamento e calibração",
+   "tipo": "metodo",
+   "descricao": "Processo que requer extensões do filtro de Kalman, como o filtro estendido (EKF), para modelos de medição não lineares.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "integracao-ins-gnss": {
+   "nome": "integração INS/GNSS",
+   "tipo": "metodo",
+   "descricao": "Processo de combinação de dados de sensores inerciais e de navegação por satélite em diferentes níveis de acoplamento.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "atualizacao-de-velocidade-zero-zupt": {
+   "nome": "atualização de velocidade zero (ZUPT)",
+   "tipo": "metodo",
+   "descricao": "Técnica usada para alinhamento fino na integração INS/GNSS.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "deteccao-e-isolamento-de-falhas-fdi": {
+   "nome": "detecção e isolamento de falhas (FDI)",
+   "tipo": "metodo",
+   "descricao": "Técnica de monitoramento de integridade que usa soluções paralelas para detectar e isolar falhas.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "quaternion-quaternion": {
+   "nome": "quaternion (quaternion)",
+   "tipo": "conceito",
+   "descricao": "Extensão de números complexos usada para representar rotações em SO(3) sem singularidades.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtro-de-kalman-de-estado-de-erro-eskf": {
+   "nome": "filtro de Kalman de estado de erro (ESKF)",
+   "tipo": "metodo",
+   "descricao": "Algoritmo que estima o estado nominal e um estado de erro linearizado para fusão de dados de sensores.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "perturbacao-da-orientacao-orientation-perturbation": {
+   "nome": "perturbação da orientação (orientation perturbation)",
+   "tipo": "grandeza",
+   "descricao": "Pequena rotação (δθ_L ou δθ_G) aplicada ao quaternion nominal para representar erros.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "vies-do-acelerometro-accelerometer-bias": {
+   "nome": "viés do acelerômetro (accelerometer bias)",
+   "tipo": "grandeza",
+   "descricao": "Erro constante (a_b) subtraído da leitura bruta do acelerômetro.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "vies-do-giroscopio-gyroscope-bias": {
+   "nome": "viés do giroscópio (gyroscope bias)",
+   "tipo": "grandeza",
+   "descricao": "Erro constante (ω_b) subtraído da leitura bruta do giroscópio.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "reset-do-estado-de-erro-error-state-reset": {
+   "nome": "reset do estado de erro (error state reset)",
+   "tipo": "metodo",
+   "descricao": "Operação que incorpora o estado de erro atualizado ao estado nominal e zera o erro.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "covariancia-do-estado-state-covariance": {
+   "nome": "covariância do estado (state covariance)",
+   "tipo": "metrica",
+   "descricao": "Matriz que quantifica a incerteza do estado de erro e é atualizada com o processo de ruído.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "jacobi-jacobian": {
+   "nome": "jacobi (Jacobian)",
+   "tipo": "conceito",
+   "descricao": "Matriz de derivadas parciais que lineariza as equações de erro para o filtro.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "coversio-dupla-double-cover": {
+   "nome": "covérsio dupla (double cover)",
+   "tipo": "fenomeno",
+   "descricao": "Propriedade onde quaternions unitários representam a mesma rotação 3D com sinais opostos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "transformacao-insaturada-unscented-transformation": {
+   "nome": "transformação insaturada (unscented transformation)",
+   "tipo": "metodo",
+   "descricao": "Usa pontos sigma para capturar mais precisamente a densidade posterior do que a linearização, sem exigir que a não linearidade seja suave.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "estimador-de-ponto-sigma-iterado": {
+   "nome": "estimador de ponto sigma iterado",
+   "tipo": "metodo",
+   "descricao": "Apresentou um pequeno viés (emean ≈ -3.84 cm) e um erro quadrático médio (esq ≈ 4.32 m²) em 1,000,000 de testes.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "funcoes-de-custo-robustas": {
+   "nome": "funções de custo robustas",
+   "tipo": "metodo",
+   "descricao": "Incluem Cauchy e Geman-McClure para lidar com erros não gaussianos e outliers.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "metodo-de-minimos-quadrados-iterativamente-reponderados-irls": {
+   "nome": "método de mínimos quadrados iterativamente reponderados (IRLS)",
+   "tipo": "metodo",
+   "descricao": "Apresentado para lidar com erros não gaussianos e outliers.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "otimizacao-de-gauss-newton": {
+   "nome": "otimização de Gauss-Newton",
+   "tipo": "metodo",
+   "descricao": "Adaptada para grupos de Lie usando um esquema de perturbação personalizado.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "navegacao-inercial-visual-vin": {
+   "nome": "navegação inercial visual (VIN)",
+   "tipo": "conceito",
+   "descricao": "Usa um EKF em SE(3), onde o cálculo da média ocorre no grupo e da covariância na álgebra de Lie.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "localizacao-e-mapeamento-simultaneos-slam": {
+   "nome": "localização e mapeamento simultâneos (SLAM)",
+   "tipo": "conceito",
+   "descricao": "Problema de grande escala formulado como problema de otimização batch.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ajuste-de-feixe-ba": {
+   "nome": "ajuste de feixe (BA)",
+   "tipo": "conceito",
+   "descricao": "Problema de grande escala formulado como problema de otimização batch.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fator-de-escala": {
+   "nome": "fator de escala",
+   "tipo": "metrica",
+   "descricao": "parâmetro de não-linearidade dos sensores, com valores típicos de 0,03-0,3%",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "angulos-de-euler": {
+   "nome": "ângulos de Euler",
+   "tipo": "conceito",
+   "descricao": "método para cálculo da atitude que evita singularidades",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "quaternoes": {
+   "nome": "quaternões",
+   "tipo": "conceito",
+   "descricao": "método para cálculo da atitude",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "nao-comutabilidade": {
+   "nome": "não comutabilidade",
+   "tipo": "fenomeno",
+   "descricao": "efeito que afeta a precisão da atualização da atitude em rotações",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "integracao-profunda-deep-ins-gps": {
+   "nome": "integração profunda (deep INS-GPS)",
+   "tipo": "metodo",
+   "descricao": "técnica que melhora a relação sinal-ruído e a resistência a multi-caminhos",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "orcamento-de-erros": {
+   "nome": "orçamento de erros",
+   "tipo": "metodo",
+   "descricao": "análise essencial para definir parâmetros de desempenho dos sensores e algoritmos",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "treino-baseado-em-velocidade-vbt": {
+   "nome": "treino baseado em velocidade (VBT)",
+   "tipo": "metodo",
+   "descricao": "Método que monitora deslocamento e tempo da barra para avaliar intensidade e regular autonomamente o treino.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-concentrica-de-pico-pcv": {
+   "nome": "velocidade concêntrica de pico (PCV)",
+   "tipo": "metrica",
+   "descricao": "A velocidade mais rápida atingida na fase concêntrica.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "zona-de-forca-acelerativa": {
+   "nome": "zona de força acelerativa",
+   "tipo": "conceito",
+   "descricao": "Faixa entre 0.50 e 0.75 m/s, aproximadamente 60-80% do 1RM, que serve a múltiplas adaptações.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fadiga-do-sistema-nervoso-central-snc": {
+   "nome": "fadiga do sistema nervoso central (SNC)",
+   "tipo": "fenomeno",
+   "descricao": "Indicada pela perda de velocidade dentro de um set.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "perda-de-velocidade": {
+   "nome": "perda de velocidade",
+   "tipo": "metrica",
+   "descricao": "Indicador de fadiga do SNC; perdas superiores a 30% podem levar a ganhos de hipertrofia mas diminuem a taxa de desenvolvimento de força.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "mesociclos-de-preparacao-de-tecidos": {
+   "nome": "mesociclos de preparação de tecidos",
+   "tipo": "conceito",
+   "descricao": "Fase da periodização anual que usa 40-60% do 1RM.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "periodizacao-ondulante": {
+   "nome": "periodização ondulante",
+   "tipo": "metodo",
+   "descricao": "Adapta o foco entre força, velocidade e potência em diferentes dias dentro de uma mesma semana.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "perfil-individual-do-atleta": {
+   "nome": "perfil individual do atleta",
+   "tipo": "conceito",
+   "descricao": "Criado para cada atleta, considerando altura, peso, idade de treino e densidade de fibras musculares para sucesso no VBT.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "analise-de-dados-objetiva": {
+   "nome": "análise de dados objetiva",
+   "tipo": "metodo",
+   "descricao": "Contrasta com a observação visual subjetiva para quantificar o movimento.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "transformada-de-fourier": {
+   "nome": "transformada de fourier",
+   "tipo": "metodo",
+   "descricao": "Método de análise no domínio da frequência para processamento de sinais.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtragem-digital": {
+   "nome": "filtragem digital",
+   "tipo": "metodo",
+   "descricao": "Método que envolve o compromisso na escolha da frequência de corte (fc) para remover ruído com o mínimo de distorção do sinal.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "frequencia-de-corte-fc": {
+   "nome": "frequência de corte (fc)",
+   "tipo": "grandeza",
+   "descricao": "Parâmetro escolhido para remover ruído com o mínimo de distorção do sinal na filtragem digital.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "optotrack": {
+   "nome": "optotrack",
+   "tipo": "dispositivo",
+   "descricao": "Sistema de captura de movimento que utiliza marcadores ativos pulsando a até 4600 Hz com precisão de 0,1 mm e resolução de 0,01 mm.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "centro-de-massa-com": {
+   "nome": "centro de massa (COM)",
+   "tipo": "conceito",
+   "descricao": "Ponto que representa a distribuição de massa do corpo, para o qual são apresentadas equações na modelagem corporal.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "centro-de-pressao-cop": {
+   "nome": "centro de pressão (COP)",
+   "tipo": "conceito",
+   "descricao": "Ponto de aplicação da força de reação do solo, para o qual são apresentadas equações na modelagem corporal.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "momento-de-inercia-i": {
+   "nome": "momento de inércia (I)",
+   "tipo": "metrica",
+   "descricao": "Propriedade que resiste à aceleração angular, calculável para um segmento em relação ao seu centro de massa ou a uma articulação usando o teorema dos eixos paralelos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "trabalho-mecanico-muscular-potencia": {
+   "nome": "trabalho mecânico muscular (potência)",
+   "tipo": "metrica",
+   "descricao": "Trabalho realizado pelos músculos, definido e calculado na análise de biomecânica muscular.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "cocontracao": {
+   "nome": "cocontração",
+   "tipo": "fenomeno",
+   "descricao": "Ativação simultânea de músculos agonistas e antagonistas, discutida na biomecânica muscular.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "eletromiografia-emg": {
+   "nome": "eletromiografia (EMG)",
+   "tipo": "metodo",
+   "descricao": "Técnica que registra a atividade elétrica muscular, onde a colocação de eletrodos visa minimizar o cross-talk e a relação entre o sinal EMG e a tensão muscular é discutida.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "resonancia-funcional-fmri": {
+   "nome": "resonancia funcional (fMRI)",
+   "tipo": "dispositivo",
+   "descricao": "Técnica de neuroimagem utilizada para estudo do controle motor integrado com o sistema nervoso central.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  }
+ },
+ "arestas": [
+  {
+   "de": "agachamento-squat",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "variabilidade-linear",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "complexidade-do-movimento",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "plataforma-de-forcas",
+   "para": "variabilidade-linear",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "plataforma-de-forcas",
+   "para": "complexidade-do-movimento",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "variabilidade-linear",
+   "para": "desvio-padrao-sd",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "complexidade-do-movimento",
+   "para": "analise-de-flutuacao-destendenciada-dfa",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "complexidade-do-movimento",
+   "para": "entropia-difusa-fuzzyen",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "complexidade-do-movimento",
+   "para": "entropia-amostral-sampen",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "carga-maxima-1rm",
+   "para": "agachamento-squat",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "velocidade-propulsiva-media",
+   "para": "carga-maxima-1rm",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "plataforma-de-forcas",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "desvio-padrao-sd",
+   "para": "complexidade-do-movimento",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Motor_variability_during_resistance_training_Acceleration_signal_as_intensity_indicator.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "deep-learning-dl",
+   "para": "reconhecimento-de-atividades-humanas-har",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "reconhecimento-de-atividades-humanas-har",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "autoencoder",
+   "para": "deep-learning-dl",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "redes-profundas-de-crenca-dbns",
+   "para": "deep-learning-dl",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-cnn",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "processa",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-recorrente-rnn",
+   "para": "deep-learning-dl",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "aprendizado-por-reforco-rl",
+   "para": "reconhecimento-de-atividades-humanas-har",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acuracia",
+   "para": "deep-learning-dl",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rotulacao-de-dados",
+   "para": "deep-learning-dl",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-dilatada-dilated-cnn",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-dilatada-dilated-cnn",
+   "para": "correcao-de-giroscopio-n",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "correcao-de-giroscopio-n",
+   "para": "erro-de-orientacao-roe",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "correcao-de-giroscopio-n",
+   "para": "giroscopio",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "processamento-dead-reckoning",
+   "para": "giroscopio",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "processamento-dead-reckoning",
+   "para": "orientacao-atitude",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "vies-bias",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-dilatada-dilated-cnn",
+   "para": "perda-huber",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acelerometro",
+   "para": "erro-de-orientacao-roe",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-dilatada-dilated-cnn",
+   "para": "odometria-visual-inercial-vio",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-dilatada-dilated-cnn",
+   "para": "deriva-drift",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Denoising_IMU_Gyroscopes_with_Deep_Learning_for_Open-Loop_Attitude_Estimation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultrawideband-uwb",
+   "para": "erro-de-distancia-medio",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sensor-vestivel",
+   "para": "ultrawideband-uwb",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-de-distancia-medio",
+   "para": "erro-percentil-90",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "area-de-sombra-corporal",
+   "para": "erro-de-distancia-medio",
+   "relacao": "causa",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "nao-linha-de-visada-nlos",
+   "para": "area-de-sombra-corporal",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "difracao",
+   "para": "erro-de-distancia-medio",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-estendido-ekf",
+   "para": "erro-percentil-90",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "testa",
+   "para": "difracao",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "peito",
+   "para": "area-de-sombra-corporal",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "mitigacao-do-sombreamento-corporal",
+   "para": "erro-percentil-90",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "mitigacao-do-sombreamento-corporal",
+   "para": "area-de-sombra-corporal",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Effects_of_the_Body_Wearable_Sensor_Position_on_the_UWB_Localization_Accuracy.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "aprendizado-profundo-deep-learning",
+   "para": "navegacao-inercial",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "aprendizado-profundo-deep-learning",
+   "para": "fusao-de-sensores",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-cnn",
+   "para": "calibracao",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-longo-curto-prazo-lstm",
+   "para": "eliminacao-de-ruido-denoising",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-convolucional-cnn",
+   "para": "erros-do-imu",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-longo-curto-prazo-lstm",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "aprendizado-profundo-deep-learning",
+   "para": "covariancia-de-ruido",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "calibracao",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "fusao-de-sensores",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "transformer",
+   "para": "navegacao-inercial",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Navigation_Meets_Deep_Learning_A_Survey_of_Current_Trends_and_Future_Directions.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "captura-de-movimento",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "analise-da-marcha",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "avaliacao-clinica",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "parametros-cinematicos-3d",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "parametros-cinematicos-3d",
+   "para": "articulacao-do-quadril",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "parametros-cinematicos-3d",
+   "para": "articulacao-do-joelho",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "parametros-cinematicos-3d",
+   "para": "articulacao-do-tornozelo",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "processa",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "tecnica-de-aprendizado-de-maquina-ml",
+   "para": "filtro-de-kalman",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-quadratico-medio-rmse",
+   "para": "participantes-saudaveis",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Inertial_Sensors _for_Human_Motion_Analysis_A_Comprehensive_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "classificador-de-atividade-ac",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "regressor-de-cinematica-kr",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "rede-de-agregacao-de-caracteristicas-fan",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "classificador-de-atividade-ac",
+   "para": "exercicio-de-forca",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "exercicio-de-forca",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "simulacao-de-trabalho-industrial",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "erro-quadratico-medio-rmse",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "deriva-drift",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "velocidade-no-supino",
+   "para": "ground-truth-sistema-de-captura-de-movimento-optico",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ail-ke-activity-in-the-loop-kinematics-estimator",
+   "para": "ombro",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "exercicio-de-forca",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Learning-based_3D_human_kinematics_estimation_using_behavioral_constraints_from_activity_classiﬁcation.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-hibrido-hybrid",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-hibrido-hybrid",
+   "para": "aceleracao-livre-de-gravidade",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-hibrido-hybrid",
+   "para": "taxa-angular",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-linear-lkf",
+   "para": "filtro-hibrido-hybrid",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "janela-deslizante",
+   "para": "filtro-hibrido-hybrid",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-absoluto-medio-mae",
+   "para": "filtro-hibrido-hybrid",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "deriva-drift",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-de-distancia-percorrida-det",
+   "para": "validacao-cruzada-por-sujeitos-left-outs",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-hibrido-hybrid",
+   "para": "caminhada",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "problema-de-regressao",
+   "para": "filtro-hibrido-hybrid",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-hibrido-hybrid",
+   "para": "validacao-cruzada-por-sujeitos-left-outs",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "RNN-Aided_Human_Velocity_Estimation_from_a_Single_IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "validade",
+   "para": "sensor-de-velocidade",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sistema-lpt",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "concordancia-entre-dispositivos",
+   "para": "sensor-de-velocidade",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "confiabilidade-intradia",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "limite-de-concordancia-loa",
+   "para": "sensor-de-velocidade",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modelo-de-predicao-de-1rm",
+   "para": "sensor-de-velocidade",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "exercicio-de-agachamento",
+   "para": "modelo-de-predicao-de-1rm",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "exercicio-de-levantamento-terra",
+   "para": "modelo-de-predicao-de-1rm",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-absoluto",
+   "para": "modelo-de-predicao-de-1rm",
+   "relacao": "causa",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modelo-de-predicao-de-1rm",
+   "para": "exercicio-de-agachamento",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modelo-de-predicao-de-1rm",
+   "para": "exercicio-de-levantamento-terra",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Reliability_Device_Agreement_and_Validity_of_Load–Velocity_Profiles_ A_Systematic_Review_with_Meta‑analysis.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "giroscopio",
+   "para": "deriva-drift",
+   "relacao": "causa",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "magnetometro-magnetometer",
+   "para": "deriva-drift",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "giroscopio",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acelerometro",
+   "para": "sensor-de-inclinacao-tilt-sensor",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "giroscopio",
+   "para": "sensor-de-inclinacao-tilt-sensor",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sensor-de-inclinacao-tilt-sensor",
+   "para": "monitoramento-de-marcha",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "reconhecimento-de-postura",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "flexao-do-tronco",
+   "para": "amplitude-de-movimento-articular",
+   "relacao": "determina",
+   "origens": [
+    {
+     "arquivo": "Sensor-Based_Wearable_Systems_for_Monitoring_Human_Motion_and_Posture_A_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "transdutor-linear-lpt",
+   "para": "sistema-de-captura-de-movimento-3d",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "transdutor-linear-lpt",
+   "para": "plataforma-de-forcas",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "velocidade-media-concentrica",
+   "para": "dispositivo-para-monitorar-treino-de-resistencia",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "precisao",
+   "para": "transdutor-linear-lpt",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "confiabilidade-intra-dispositivo",
+   "para": "dispositivo-para-monitorar-treino-de-resistencia",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "exercicio-balistico",
+   "para": "acelerometro",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "agachamento-livre",
+   "para": "transdutor-linear-lpt",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "validade-aceitavel",
+   "para": "precisao",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-do-dispositivo",
+   "para": "confiabilidade-intra-dispositivo",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "The_Validity_and_Reliability_of_Commercially_Available_Resistance_Training_Monitoring_Devices_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultra-inertial-poser-uip",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultra-inertial-poser-uip",
+   "para": "ultrawideband-uwb",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultra-inertial-poser-uip",
+   "para": "deriva-drift",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultra-inertial-poser-uip",
+   "para": "jitter",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-estendido-ekf",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-estendido-ekf",
+   "para": "ultrawideband-uwb",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-de-atencao-por-convolucao-grafica-de-distancia-da-gcn",
+   "para": "ultrawideband-uwb",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-de-atencao-por-convolucao-grafica-de-distancia-da-gcn",
+   "para": "parametros-smpl",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "perda-de-precisao-por-temperatura",
+   "para": "ultrawideband-uwb",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultra-inertial-poser-uip",
+   "para": "erro-de-orientacao-de-segmentos-sip",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ultra-inertial-poser-uip",
+   "para": "dataset-uip-db",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erros-de-ruido-nlos",
+   "para": "rede-de-atencao-por-convolucao-grafica-de-distancia-da-gcn",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-de-atencao-por-convolucao-grafica-de-distancia-da-gcn",
+   "para": "parametros-smpl",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Ultra_Inertial_Poser_Scalable_Motion _Capture_and_Tracking_from_Sparse_Inertial_Sensors_and_Ultra-Wideband_Ranging.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sistema-de-captura-de-movimento-3d",
+   "para": "gymaware",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sistema-de-captura-de-movimento-3d",
+   "para": "1080-quantum",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sistema-de-captura-de-movimento-3d",
+   "para": "vmaxpro",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "gymaware",
+   "para": "velocidade-media-vmean",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "gymaware",
+   "para": "velocidade-de-pico-vpeak",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "1080-quantum",
+   "para": "velocidade-de-pico-vpeak",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "vmaxpro",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "efeito-do-ponto-de-fixacao-na-barra",
+   "para": "velocidade-media-vmean",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "fase-concentrica",
+   "para": "hang-power-snatch",
+   "relacao": "comõe",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Effects_of_Placement_of_Velocity-Based_Training_Devices.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "velocidade-da-barra",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "validade",
+   "para": "padrao-ouro",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "validade",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "confiabilidade",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "erro-padrao-de-estimativa-see",
+   "para": "validade",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "coeficiente-de-variacao-cv",
+   "para": "confiabilidade",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "coeficiente-de-correlacao-de-pearson-r",
+   "para": "validade",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "coeficiente-de-correlacao-intraclasse-icc",
+   "para": "confiabilidade",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "agachamento-squat",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "salto-com-contramovimento",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Validity_and_Reliability_of_the_Inertial_Measurement_Unit_for_Barbell_Velocity_Assessments_A_Systematic_Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "acelerometro",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "giroscopio",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "navegacao-inercial",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sensor-mems",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "navegacao-inercial",
+   "para": "deriva-drift",
+   "relacao": "causa",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman",
+   "para": "alinhamento-e-calibracao",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "alinhamento-e-calibracao",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "integracao-ins-gnss",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "integracao-ins-gnss",
+   "para": "atualizacao-de-velocidade-zero-zupt",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "integracao-ins-gnss",
+   "para": "deteccao-e-isolamento-de-falhas-fdi",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "atualizacao-de-velocidade-zero-zupt",
+   "para": "alinhamento-e-calibracao",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Principles of GNSS, Inertial, and Multi-Sensor Integrated Navigation Systems (GNSS Technology and Applications) (Paul D. Groves) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "filtro-de-kalman-de-estado-de-erro-eskf",
+   "relacao": "alimenta",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-de-estado-de-erro-eskf",
+   "para": "vies-do-acelerometro-accelerometer-bias",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-de-estado-de-erro-eskf",
+   "para": "vies-do-giroscopio-gyroscope-bias",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "quaternion-quaternion",
+   "para": "perturbacao-da-orientacao-orientation-perturbation",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "perturbacao-da-orientacao-orientation-perturbation",
+   "para": "jacobi-jacobian",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "jacobi-jacobian",
+   "para": "covariancia-do-estado-state-covariance",
+   "relacao": "atualiza",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "reset-do-estado-de-erro-error-state-reset",
+   "para": "covariancia-do-estado-state-covariance",
+   "relacao": "reseta",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "coversio-dupla-double-cover",
+   "para": "quaternion-quaternion",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "vies-do-acelerometro-accelerometer-bias",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "corrompe",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "vies-do-giroscopio-gyroscope-bias",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "corrompe",
+   "origens": [
+    {
+     "arquivo": "Quaternion_kinematics_for_the_error-state_Kalman_filter.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-de-kalman-estendido-ekf",
+   "para": "transformacao-insaturada-unscented-transformation",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "estimador-de-ponto-sigma-iterado",
+   "para": "vies-bias",
+   "relacao": "apresenta",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "estimador-de-ponto-sigma-iterado",
+   "para": "erro-quadratico-medio-rmse",
+   "relacao": "apresenta",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "funcoes-de-custo-robustas",
+   "para": "metodo-de-minimos-quadrados-iterativamente-reponderados-irls",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "navegacao-inercial-visual-vin",
+   "para": "filtro-de-kalman-estendido-ekf",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "otimizacao-de-gauss-newton",
+   "para": "navegacao-inercial-visual-vin",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "localizacao-e-mapeamento-simultaneos-slam",
+   "para": "ajuste-de-feixe-ba",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "STATE_ESTIMATION_FOR_ROBOTICS.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "navegacao-inercial",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "giroscopio",
+   "para": "vies-bias",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acelerometro",
+   "para": "fator-de-escala",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "navegacao-inercial",
+   "para": "angulos-de-euler",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "navegacao-inercial",
+   "para": "quaternoes",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "nao-comutabilidade",
+   "para": "navegacao-inercial",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "integracao-profunda-deep-ins-gps",
+   "para": "filtro-de-kalman-estendido-ekf",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "orcamento-de-erros",
+   "para": "giroscopio",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "orcamento-de-erros",
+   "para": "acelerometro",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "vies-bias",
+   "para": "navegacao-inercial",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "treino-baseado-em-velocidade-vbt",
+   "para": "carga-maxima-1rm",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "treino-baseado-em-velocidade-vbt",
+   "para": "fadiga-do-sistema-nervoso-central-snc",
+   "relacao": "monitora",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "velocidade-media-concentrica",
+   "para": "treino-baseado-em-velocidade-vbt",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "velocidade-concentrica-de-pico-pcv",
+   "para": "treino-baseado-em-velocidade-vbt",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "velocidade-propulsiva-media",
+   "para": "treino-baseado-em-velocidade-vbt",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "zona-de-forca-acelerativa",
+   "para": "carga-maxima-1rm",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "perda-de-velocidade",
+   "para": "fadiga-do-sistema-nervoso-central-snc",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "perda-de-velocidade",
+   "para": "carga-maxima-1rm",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "mesociclos-de-preparacao-de-tecidos",
+   "para": "treino-baseado-em-velocidade-vbt",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "periodizacao-ondulante",
+   "para": "treino-baseado-em-velocidade-vbt",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "perfil-individual-do-atleta",
+   "para": "treino-baseado-em-velocidade-vbt",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Velocity-Based Training How to Apply Science, Technology, and Data to Maximize Performance (Nunzio Signore) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtragem-digital",
+   "para": "frequencia-de-corte-fc",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "momento-de-inercia-i",
+   "para": "centro-de-massa-com",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,243 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tutor</title>
+<style>
+ :root{--bg:#eef0f3;--card:#fff;--line:#dbe0e6;--ink:#1d2229;--mut:#6b7580;--ag:#4a3ea8;--ag2:#e9e6f8;--ok:#2a6647}
+ @media(prefers-color-scheme:dark){:root{--bg:#14171b;--card:#1c2026;--line:#2d333b;
+  --ink:#e6eaef;--mut:#8b95a1;--ag:#a99cf5;--ag2:#2a2740;--ok:#7cc7a2}}
+ *{box-sizing:border-box}
+
+ body{margin:0;font:17px/1.7 -apple-system,system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  height:100vh;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:14px;padding:14px}
+ @media(max-width:900px){body{grid-template-columns:1fr;height:auto}}
+ .col{display:flex;flex-direction:column;min-height:0;gap:10px}
+ h2{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0;display:flex;justify-content:space-between;align-items:baseline}
+ h2 a{color:var(--mut);font-weight:normal;letter-spacing:0;text-transform:none;font-size:.8rem}
+ #conversa{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding-right:4px}
+ .m{max-width:62ch;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:12px 16px}
+ .m.voce{align-self:flex-end;background:var(--ag2);border-color:transparent}
+ .m.tutor{border-left:3px solid var(--ag)}
+ .m p{margin:0 0 .7em}.m p:last-child{margin-bottom:0}
+ .m ul{margin:.3em 0 .7em;padding-left:1.3em}.m li{margin:.15em 0}
+ .m code{font-size:.9em;background:var(--bg);padding:1px 5px;border-radius:3px}
+ .m small{display:block;margin-top:8px;color:var(--mut);font-size:.78rem}
+ .m hr{border:0;border-top:1px solid var(--line);margin:.6em 0}
+ .m .chips{margin-top:8px}
+ .doc{color:var(--ag);cursor:pointer;border-bottom:1px dotted var(--ag)}
+ textarea,input{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:9px 11px;width:100%}
+ textarea{resize:vertical;min-height:70px}
+ .barra{display:flex;gap:8px;align-items:center}
+ button{font:inherit;font-size:.9rem;cursor:pointer;background:var(--card);color:var(--ink);
+  border:1px solid var(--line);border-radius:4px;padding:8px 13px;white-space:nowrap}
+ button:hover{border-color:var(--ag);color:var(--ag)}
+ button.pri{background:var(--ag);border-color:var(--ag);color:#fff}
+ button:disabled{opacity:.45;cursor:wait}
+ #status{font-size:.82rem;color:var(--mut);min-height:1.2em}
+ /* mapa */
+ #mapa{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow-y:auto;flex:1;
+  display:flex;flex-direction:column;font-size:.92rem}
+ #busca{border:0;border-bottom:1px solid var(--line);border-radius:4px 4px 0 0}
+ #sugestoes{list-style:none;margin:0;padding:0;border-bottom:1px solid var(--line);max-height:180px;overflow-y:auto}
+ #sugestoes li{padding:5px 12px;cursor:pointer}#sugestoes li:hover{background:var(--ag2)}
+ svg{width:100%;height:330px;display:block;user-select:none}
+ svg text{font-size:11px;fill:var(--ink)}
+ svg .rel{font-size:9px;fill:var(--mut)}
+ svg line{stroke:var(--line);stroke-width:1.2}
+ svg .no{cursor:pointer}svg .no circle{fill:var(--card);stroke:var(--ag);stroke-width:1.5}
+ svg .no.centro circle{fill:var(--ag)}svg .no.centro text{font-weight:600}
+ #info{padding:12px 14px;border-top:1px solid var(--line)}
+ #info h3{margin:0 0 4px;font-size:1.05rem}#info .tipo{color:var(--mut);font-size:.8rem;margin-left:6px;font-weight:normal}
+ #info h4{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:14px 0 4px}
+ #info ul{margin:0;padding-left:1.1em}#info li{margin:2px 0}
+ .lig{cursor:pointer;color:var(--ag)}
+ .chip{display:inline-block;background:var(--ag2);border-radius:3px;padding:0 6px;margin:2px 4px 2px 0;font-size:.8rem;cursor:pointer}
+ .trecho{border-left:2px solid var(--line);padding:4px 10px;margin:8px 0;font-size:.85rem;white-space:pre-wrap}
+ .trecho b{font-size:.78rem;color:var(--mut)}
+ .vazio{color:var(--mut)}
+</style>
+
+<div class="col">
+  <h2>Tutor <a href="/">ir para a banca →</a></h2>
+  <div id="conversa"></div>
+  <div id="status"></div>
+  <textarea id="txt" placeholder="Sua pergunta…  (Cmd+Enter envia)"></textarea>
+  <div class="barra">
+    <button class="pri" onclick="perguntar()">Perguntar</button>
+    <button onclick="limpar()">Começar do zero</button>
+  </div>
+</div>
+
+<div class="col">
+  <h2>Mapa de conceitos</h2>
+  <div id="mapa">
+    <input id="busca" placeholder="procurar conceito…" oninput="sugerir(this.value)" autocomplete="off">
+    <ul id="sugestoes" hidden></ul>
+    <svg id="svg" viewBox="0 0 340 330"></svg>
+    <div id="info"><span class="vazio">Pergunte algo, ou procure um conceito acima.</span></div>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+let grafo = {nos:{}, arestas:[]}, catalogo = {}, historico = [], ocupado = false, atual = null;
+
+
+async function carregar(){
+  const [g, c] = await Promise.all([fetch('/grafo').then(r=>r.json()), fetch('/catalogo').then(r=>r.json())]);
+  grafo = g; for (const it of c) catalogo[it.id] = it;
+  try{ historico = JSON.parse(localStorage.getItem('tutor.historico') || '[]'); }catch(e){ historico = []; }
+  for (const m of historico) mostrar(m.role === 'user' ? 'voce' : 'tutor', m.content, m.buscas, m.conceitos);
+  if (!historico.length) convite();
+  const ultima = [...historico].reverse().find(m => m.conceitos && m.conceitos.length);
+  if (ultima) selecionar(ultima.conceitos[0]);       // o mapa volta para onde a conversa parou
+  if (!Object.keys(grafo.nos).length) $('info').innerHTML = '<span class=vazio>Sem grafo ainda: rode <code>python extrair.py resumos</code>.</span>';
+}
+function guardar(){ try{ localStorage.setItem('tutor.historico', JSON.stringify(historico.slice(-40))); }catch(e){} }
+function limpar(){ historico = []; guardar(); $('conversa').innerHTML = ''; convite(); }
+
+const EXEMPLOS = ['O que é deriva (drift) e por que ela atrapalha medir velocidade com IMU?',
+                  'Como funciona o perfil carga-velocidade?',
+                  'Por que v = ω·r evita integrar o acelerômetro na cadeira extensora?'];
+function convite(){
+  const el = document.createElement('div'); el.className = 'm tutor'; el.id = 'convite';
+  el.innerHTML = '<p>Pergunte sobre sensores inerciais, biomecânica ou treino baseado em velocidade. '
+    + 'Eu respondo só com o que está nos artigos e livros da base, cito de onde tirei, e depois peço que você explique de volta.</p>'
+    + '<p>Para começar:</p><ul>' + EXEMPLOS.map(e => `<li><span class="lig" onclick="$('txt').value=this.textContent;perguntar()">${esc(e)}</span></li>`).join('') + '</ul>'
+    + '<p>À direita, o mapa: clique num conceito para ver o que se liga a ele e onde aparece.</p>';
+  $('conversa').appendChild(el);
+}
+
+
+function aviso(t){ $('status').textContent = t; }
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function formatar(texto){
+  const blocos = texto.trim().split(/\n{2,}/).map(b => {
+    const linhas = b.split('\n');
+    if (/^\s*(-{3,}|\*{3,}|_{3,})\s*$/.test(b)) return '<hr>';
+    if (/^#{1,6}\s+/.test(b)) return '<p><b>' + inline(b.replace(/^#{1,6}\s+/, '')) + '</b></p>';
+    if (linhas.every(l => /^\s*[-*•]\s+/.test(l)))
+      return '<ul>' + linhas.map(l => '<li>' + inline(l.replace(/^\s*[-*•]\s+/, '')) + '</li>').join('') + '</ul>';
+    return '<p>' + inline(b).replace(/\n/g, '<br>') + '</p>';
+  });
+  return blocos.join('');
+}
+function inline(s){
+  return esc(s)
+    .replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\b([AL]\d{1,2})\b/g, (m, id) => catalogo[id] ? `<span class="doc" onclick="verDoc('${id}')" title="${esc(catalogo[id].arquivo)}">${id}</span>` : m);
+}
+function mostrar(quem, texto, buscas, conceitos){
+  const el = document.createElement('div');
+  el.className = 'm ' + quem;
+  el.innerHTML = quem === 'tutor' ? formatar(texto) : '<p>' + esc(texto).replace(/\n/g,'<br>') + '</p>';
+  const ids = (conceitos || []).filter(id => grafo.nos[id]).slice(0, 6);
+  if (ids.length){                                   // os conceitos que a resposta tocou: atalho para o mapa
+    const c = document.createElement('div'); c.className = 'chips';
+    c.innerHTML = 'no mapa: ' + ids.map(id => `<span class="chip" onclick="selecionar('${id}')">${esc(grafo.nos[id].nome)}</span>`).join('');
+    el.appendChild(c);
+  }
+  if (buscas && buscas.length){
+    const s = document.createElement('small');
+    s.textContent = 'consultou: ' + buscas.map(b => b.documentos.join(', ') + (b.pergunta ? ' — «' + b.pergunta + '»' : '')).join('; ');
+    s.title = buscas.flatMap(b => b.arquivos || b.documentos).join('\n');
+    el.appendChild(s);
+  }
+  $('conversa').appendChild(el);
+  $('conversa').scrollTop = $('conversa').scrollHeight;
+}
+async function perguntar(){
+  const pergunta = $('txt').value.trim();
+  if (!pergunta || ocupado) return;
+  ocupado = true; document.querySelectorAll('button').forEach(b => b.disabled = true);
+  $('txt').value = ''; const conv = $('convite'); if (conv) conv.remove();
+  mostrar('voce', pergunta); aviso('o tutor está lendo…');
+  try{
+    const r = await fetch('/tutor/perguntar', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({pergunta, historico: historico.map(m => ({role:m.role, content:m.content}))})});
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.erro || d.detail || r.status);
+    historico.push({role:'user', content:pergunta}, {role:'assistant', content:d.resposta, buscas:d.buscas, conceitos:d.conceitos});
+    guardar(); mostrar('tutor', d.resposta, d.buscas, d.conceitos); aviso('');
+    if (d.conceitos && d.conceitos.length) selecionar(d.conceitos[0]);   // o mapa segue a conversa
+  }catch(e){ aviso('erro: ' + e.message); }
+  ocupado = false; document.querySelectorAll('button').forEach(b => b.disabled = false);
+}
+$('txt').addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') perguntar(); });
+
+function sugerir(q){
+  q = q.trim().toLowerCase(); const ul = $('sugestoes');
+  if (!q){ ul.hidden = true; return; }
+  const achados = Object.entries(grafo.nos)
+    .filter(([id, n]) => [n.nome, ...(n.apelidos||[])].some(a => a.toLowerCase().includes(q))).slice(0, 12);
+  ul.innerHTML = achados.map(([id, n]) => `<li onclick="selecionar('${id}');this.parentNode.hidden=true">${esc(n.nome)}</li>`).join('')
+    || '<li class=vazio>nada com esse nome</li>';
+  ul.hidden = false;
+}
+function vizinhos(id){
+  const out = [], vistos = new Set();
+  for (const a of grafo.arestas){
+    if (a.de !== id && a.para !== id) continue;
+    const outro = a.de === id ? a.para : a.de, chave = outro + '|' + a.relacao;
+    if (vistos.has(chave) || !grafo.nos[outro]) continue;
+    vistos.add(chave); out.push({outro, relacao:a.relacao, saida:a.de === id, origens:a.origens||[]});
+  }
+  return out;
+}
+function selecionar(id){
+  const no = grafo.nos[id]; if (!no) return;
+  atual = id; $('busca').value = '';
+  desenhar(id, vizinhos(id).slice(0, 14));
+  const ids = o => o.map(x => `<span class="chip" onclick="verDoc('${x.arquivo}')" title="${esc(x.arquivo)}">${docId(x.arquivo)}${x.pagina ? ' p.'+x.pagina : ''}</span>`).join('');
+  const viz = vizinhos(id);
+  const lista = xs => xs.length ? '<ul>' + xs.map(v => `<li><span class="lig" onclick="selecionar('${v.outro}')">${esc(grafo.nos[v.outro].nome)}</span> <span class="tipo">${esc(v.relacao)}</span></li>`).join('') + '</ul>' : '<span class=vazio>—</span>';
+
+  const antes = viz.filter(v => v.saida && /depende|requer/.test(v.relacao));
+  const sai = viz.filter(v => v.saida && !/depende|requer/.test(v.relacao));
+  const chega = viz.filter(v => !v.saida);
+  $('info').innerHTML = `
+    <h3>${esc(no.nome)}<span class="tipo">${esc(no.tipo||'')}</span></h3>
+    <div>${esc(no.descricao || '')}</div>
+    ${no.apelidos && no.apelidos.length ? `<div class="vazio" style="font-size:.8rem">também: ${esc(no.apelidos.join(', '))}</div>` : ''}
+    <h4>Antes disso, entenda</h4>${lista(antes)}
+    <h4>Leva a</h4>${lista(sai)}
+    <h4>Chega de</h4>${lista(chega)}
+    <h4>Onde aparece</h4><div>${ids(no.origens||[]) || '<span class=vazio>—</span>'}</div>
+    <button style="margin-top:10px" onclick="verTrechos('${id}')">ver trechos</button>
+    <div id="trechos"></div>`;
+}
+function docId(arquivo){ const it = Object.values(catalogo).find(c => c.arquivo === arquivo); return it ? it.id : arquivo.slice(0,18); }
+function desenhar(id, viz){
+  const W = 340, H = 330, cx = W/2, cy = H/2, R = 112;   // viewBox = largura real do painel: texto em tamanho 1:1
+  const corta = s => s.length > 24 ? s.slice(0, 23) + '…' : s;
+  let svg = '';
+  viz.forEach((v, i) => {
+    const a = -Math.PI/2 + i * 2*Math.PI/viz.length, x = cx + R*Math.cos(a), y = cy + R*Math.sin(a);
+    const mx = (cx + x)/2, my = (cy + y)/2;
+    svg += `<line x1="${cx}" y1="${cy}" x2="${x}" y2="${y}"/>
+            <text class="rel" x="${mx}" y="${my - 3}" text-anchor="middle">${esc(v.relacao)}</text>
+            <g class="no" onclick="selecionar('${v.outro}')"><circle cx="${x}" cy="${y}" r="7"/>
+            <text x="${x}" y="${y + (y > cy + 1 ? 19 : -12)}" text-anchor="${x < cx - 50 ? 'start' : x > cx + 50 ? 'end' : 'middle'}">${esc(corta(grafo.nos[v.outro].nome))}</text></g>`;
+  });
+  svg += `<g class="no centro"><circle cx="${cx}" cy="${cy}" r="11"/>
+          <text x="${cx}" y="${cy + 26}" text-anchor="middle">${esc(corta(grafo.nos[id].nome))}</text></g>`;
+  $('svg').innerHTML = svg;
+}
+async function verTrechos(id){
+  const no = grafo.nos[id], docs = [...new Set((no.origens||[]).map(o => docId(o.arquivo)))].join(',');
+  $('trechos').innerHTML = '<span class=vazio>buscando…</span>';
+  const r = await fetch('/trechos?q=' + encodeURIComponent(no.nome) + '&docs=' + encodeURIComponent(docs));
+  const ts = await r.json();
+  $('trechos').innerHTML = ts.map(t => `<div class="trecho"><b>${t.id} · p.${t.pagina}</b>\n${esc(t.texto)}</div>`).join('') || '<span class=vazio>nada</span>';
+}
+function verDoc(ref){
+  const it = catalogo[ref] || Object.values(catalogo).find(c => c.arquivo === ref); if (!it) return;
+  $('info').innerHTML = `<h3>${it.id}<span class="tipo">${it.base} · ${it.pedacos} trechos</span></h3>
+    <div style="font-size:.8rem;color:var(--mut);word-break:break-all">${esc(it.arquivo)}</div>
+    <p>${esc(it.descricao || '(sem descrição)')}</p>
+    ${atual ? `<button onclick="selecionar('${atual}')">← voltar ao conceito</button>` : ''}`;
+}
+
+carregar();
+</script>
