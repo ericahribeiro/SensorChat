@@ -58,18 +58,32 @@ não são necessários para usar o assistente.
 ### Servidor web
 
 ```bash
-uvicorn servidor:app --reload
+uvicorn sensorchat.interfaces.web.main:app --reload
 ```
 
 - `http://localhost:8000/` — Banca
 - `http://localhost:8000/tutor` — Tutor
 
+### Logs
+
+O servidor e os comandos de terminal registram cada passo: pergunta recebida, vetorização,
+busca, contexto do grafo, envio ao LLM e resposta (com tempo e tokens), ferramentas
+chamadas e turnos da banca. O log de acesso de `/estado`, que a página da banca consulta a
+cada 1,5 s, fica de fora.
+
+O nível padrão é `INFO`. Para ver só avisos e erros:
+
+```bash
+SENSORCHAT_LOG=WARNING uvicorn sensorchat.interfaces.web.main:app
+```
+
 ### Terminal
 
 ```bash
-python 3_tutor.py              # tutor buscando em artigos e livros
-python 3_tutor.py artigos      # só em uma base
-python 2_buscar.py artigos "deriva do giroscópio"   # busca vetorial pura, sem modelo de linguagem
+python -m sensorchat tutor                                  # tutor buscando em artigos e livros
+python -m sensorchat tutor artigos                          # só em uma base
+python -m sensorchat buscar artigos "deriva do giroscópio"  # busca vetorial pura, sem modelo de linguagem
+python -m sensorchat --help                                 # todos os comandos
 ```
 
 ## Adicionando documentos
@@ -77,36 +91,40 @@ python 2_buscar.py artigos "deriva do giroscópio"   # busca vetorial pura, sem 
 Os PDFs não vão para o repositório. Para incluir documentos novos:
 
 1. Coloque os PDFs em `pdfs_artigos/` ou `pdfs_livros/`.
-2. Reindexe a base:
+2. Reindexe a base (`--mostrar` exibe exemplos do que foi descartado):
    ```bash
-   python 1_indexar.py artigos
+   python -m sensorchat indexar artigos
    ```
-3. Atualize o catálogo com a descrição dos documentos novos:
+3. Descreva os documentos novos no catálogo (`--tudo` refaz todos, `--so <nome>` filtra):
    ```bash
-   python descrever.py
+   python -m sensorchat descrever
    ```
-4. Atualize o grafo de conceitos com `extrair.py` (as respostas do modelo ficam em cache
-   em `extracoes.json`).
+4. Atualize o grafo de conceitos a partir dos resumos ou dos trechos de uma base:
+   ```bash
+   python -m sensorchat extrair resumos
+   python -m sensorchat extrair trechos artigos
+   python -m sensorchat extrair --refundir   # reconstrói o grafo só com o cache, sem chamar o modelo
+   ```
+   As respostas do modelo ficam em cache em `extracoes.json`.
 
-## Estrutura
+## Arquitetura
 
-| Arquivo | Função |
-|---|---|
-| `1_indexar.py` | Lê os PDFs de uma base, divide em pedaços e gera `base_<nome>.npz` / `.json` |
-| `2_buscar.py` | Busca vetorial pelo terminal |
-| `3_tutor.py` | Tutor pelo terminal |
-| `servidor.py` | Servidor FastAPI com a Banca e o Tutor |
-| `tutor.py` | Instruções e lógica do tutor |
-| `agentes.py` | Papéis e restrições dos agentes da Banca |
-| `roteador.py` | Ferramentas do agente: escolher documentos, buscar trechos, ler resumos |
-| `busca_multi.py` | Busca em várias bases e catálogo de documentos |
-| `grafo.py` | Consulta ao grafo de conceitos |
-| `descrever.py` | Gera descrição e resumo de cada documento (`catalogo.json`) |
-| `extrair.py` | Extrai conceitos e relações para o grafo |
-| `comum.py` | Modelo de embeddings, leitura e gravação das bases |
-| `limpeza.py`, `prosa.py` | Limpeza do texto dos PDFs e detecção de trechos de referências |
-| `medir.py` | Mede a velocidade de vetorização na máquina |
-| `teste_local.py` | Teste do servidor sem chave de API nem bases |
+O código segue arquitetura limpa com DDD: as regras de negócio não dependem de framework,
+banco de dados ou API. As dependências apontam sempre para dentro.
+
+```
+interfaces  →  application  →  domain
+     ↓               ↑
+infrastructure ──────┘  (implementa as portas da aplicação)
+```
+
+| Camada | Pasta | Conteúdo |
+|---|---|---|
+| Domínio | `sensorchat/domain/` | Entidades e regras puras: pedaços, catálogo, busca por cotas, grafo de conceitos e fusão, ata, agentes da banca, limpeza e fatiamento de texto |
+| Aplicação | `sensorchat/application/` | Casos de uso (tutor, banca, indexar, descrever, extrair), roteamento de busca, prompts e **portas** (interfaces) |
+| Infraestrutura | `sensorchat/infrastructure/` | Adaptadores das portas: arquivos JSON/NPZ, PyMuPDF, sentence-transformers, API OpenAI, publicação HTML |
+| Interfaces | `sensorchat/interfaces/` | FastAPI (`web/`) e linha de comando (`cli/`) |
+| Composição | `sensorchat/container.py` | Monta os casos de uso com os adaptadores concretos |
 
 | Dado | Conteúdo |
 |---|---|
@@ -119,6 +137,9 @@ Os PDFs não vão para o repositório. Para incluir documentos novos:
 
 ## Testes
 
+Os testes usam um modelo de linguagem e um vetorizador falsos, então não precisam de chave
+de API nem do modelo de embeddings.
+
 ```bash
-python teste_local.py
+python -m unittest discover -s tests -t .
 ```
