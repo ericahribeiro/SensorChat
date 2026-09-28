@@ -1,0 +1,12 @@
+.git
+.venv
+.idea
+.claude
+.env
+__pycache__
+*.pyc
+tests
+pdfs_artigos
+pdfs_livros
+publico
+ata.json

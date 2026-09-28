@@ -107,6 +107,32 @@ Os PDFs não vão para o repositório. Para incluir documentos novos:
    ```
    As respostas do modelo ficam em cache em `extracoes.json`.
 
+## Hospedagem em servidor
+
+O `docker-compose.yml` sobe o SensorChat atrás do [Caddy](https://caddyserver.com), que
+obtém e renova o certificado HTTPS sozinho. Precisa de um servidor Linux com **pelo menos
+4 GB de RAM** e as portas 80 e 443 abertas.
+
+1. Instale o Docker no servidor e clone o repositório.
+2. Crie o `.env` na pasta do projeto:
+   ```
+   MIMO_API_KEY=sua-chave-aqui
+   BANCA_USUARIO=banca
+   BANCA_SENHA=uma-senha-forte
+   DOMINIO=203-0-113-10.sslip.io
+   ```
+   Sem domínio próprio, o [sslip.io](https://sslip.io) aponta `<ip-com-hífens>.sslip.io`
+   para o IP do servidor, e o Caddy consegue o certificado do mesmo jeito.
+3. Suba:
+   ```bash
+   docker compose up -d --build
+   ```
+   O site fica em `https://<DOMINIO>/` (banca) e `https://<DOMINIO>/tutor`.
+
+A ata da banca e o HTML publicado ficam no volume `dados` e sobrevivem a reinícios. Para
+atualizar depois de um `git pull` (código ou bases novas), rode o mesmo `docker compose up
+-d --build`. Para ver os logs: `docker compose logs -f sensorchat`.
+
 ## Arquitetura
 
 O código segue arquitetura limpa com DDD: as regras de negócio não dependem de framework,
