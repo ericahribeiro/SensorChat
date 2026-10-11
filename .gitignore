@@ -4,8 +4,8 @@ __pycache__/
 *.pyc
 ata.json
 publico/
-base_*.npz
-base_*.json
 pdfs_artigos/
 pdfs_livros/
 .env
+.claude
+audio/

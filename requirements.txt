@@ -1,10 +1,10 @@
-# Tutor de artigos (RAG)
 pymupdf
-numpy
-sentence-transformers
+numpy<2
+sentence-transformers==2.7.0
+transformers==4.41.2
+accelerate==0.31.0
 
-# Banca (servidor + agentes)
 fastapi
 uvicorn
-openai            # SDK usado para falar com a API da Xiaomi (formato compatível)
-python-dotenv     # lê a chave do .env, para nunca escrevê-la no código
+openai
+python-dotenv

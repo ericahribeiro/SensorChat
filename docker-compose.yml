@@ -1,0 +1,25 @@
+services:
+  sensorchat:
+    build: .
+    env_file: .env
+    volumes:
+      - dados:/dados
+    restart: unless-stopped
+
+  caddy:
+    image: caddy:2
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOMINIO: ${DOMINIO:?defina DOMINIO no .env}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_dados:/data
+    depends_on:
+      - sensorchat
+    restart: unless-stopped
+
+volumes:
+  dados:
+  caddy_dados:

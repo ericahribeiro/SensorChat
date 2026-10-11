@@ -1,0 +1,392 @@
+<!doctype html><html lang="pt-BR"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biblioteca</title>
+<style>
+ :root{--bg:#eef0f3;--card:#fff;--line:#dbe0e6;--ink:#1d2229;--mut:#6b7580;--ag:#4a3ea8;--ag2:#e9e6f8;--ok:#2a6647;--lendo:#fff6d6}
+ @media(prefers-color-scheme:dark){:root{--bg:#14171b;--card:#1c2026;--line:#2d333b;
+  --ink:#e6eaef;--mut:#8b95a1;--ag:#a99cf5;--ag2:#2a2740;--ok:#7cc7a2;--lendo:#3a3320}}
+ *{box-sizing:border-box}
+ body{margin:0;font:16px/1.6 -apple-system,system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  height:100vh;display:grid;grid-template-columns:300px minmax(0,1fr) 360px;gap:14px;padding:14px}
+ .col{display:flex;flex-direction:column;min-height:0;min-width:0;gap:10px}
+ @media(max-width:1180px){body{grid-template-columns:280px minmax(0,1fr);grid-template-rows:minmax(0,1fr) 300px}
+  #c-estante{grid-row:1 / span 2}}
+ @media(max-width:760px){body{display:block;height:auto}.col{margin-bottom:18px}
+  #lista{max-height:46vh}#leitor{max-height:80vh}#conversa{max-height:50vh}}
+ h2{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin:0;
+  display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+ h2 a{color:var(--mut);font-weight:normal;letter-spacing:0;text-transform:none;font-size:.8rem;margin-left:10px}
+ input,textarea,select{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);
+  border-radius:4px;padding:8px 10px;width:100%}
+ select{width:auto;padding:6px 8px;font-size:.88rem}
+ textarea{resize:vertical;min-height:64px}
+ button{font:inherit;font-size:.88rem;cursor:pointer;background:var(--card);color:var(--ink);
+  border:1px solid var(--line);border-radius:4px;padding:7px 12px;white-space:nowrap}
+ button:hover{border-color:var(--ag);color:var(--ag)}
+ button.pri{background:var(--ag);border-color:var(--ag);color:#fff}
+ button.pri:hover{opacity:.88;color:#fff}
+ button:disabled{opacity:.45;cursor:wait}
+ .barra{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+ .vazio{color:var(--mut)}
+ .caixa{background:var(--card);border:1px solid var(--line);border-radius:4px}
+
+ /* estante */
+ #lista{flex:1;overflow-y:auto;font-size:.9rem}
+ #lista h3{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:0;
+  padding:10px 12px 4px;position:sticky;top:0;background:var(--card)}
+ .item{padding:7px 12px;cursor:pointer;border-left:3px solid transparent;display:flex;gap:8px;line-height:1.35}
+ .item:hover{background:var(--ag2)}
+ .item.aberto{border-left-color:var(--ag);background:var(--ag2)}
+ .item .id{color:var(--ag);font-size:.78rem;min-width:2.1em;padding-top:1px}
+ .item small{display:block;color:var(--mut);font-size:.74rem}
+ #adicionar{padding:10px 12px;font-size:.88rem}
+ #adicionar summary{cursor:pointer;color:var(--ag)}
+ #adicionar .barra{margin-top:8px}
+ #adicionar input[type=file]{font-size:.8rem;padding:6px}
+ #pend{margin-top:8px;font-size:.8rem;color:var(--mut)}
+ #pend b{color:var(--ink);font-weight:600}
+ #diario{margin:8px 0 0;max-height:170px;overflow-y:auto;font:11.5px/1.45 ui-monospace,Menlo,monospace;
+  white-space:pre-wrap;word-break:break-word;color:var(--mut)}
+ #recado{font-size:.8rem;color:var(--mut);min-height:1.2em;margin-top:6px}
+
+ /* leitor */
+ #leitor{flex:1;overflow-y:auto;padding:0 0 30px}
+ #tocador{position:sticky;top:0;background:var(--card);border-bottom:1px solid var(--line);
+  padding:8px 22px;z-index:2;font-size:.85rem}
+ #tocador .onde{color:var(--mut);margin-left:auto;font-size:.8rem}
+ #recado-voz{flex-basis:100%;color:var(--mut);font-size:.8rem}#recado-voz:empty{display:none}
+ #capa{padding:20px 26px 6px;max-width:74ch}
+ #capa h1{font-size:1.35rem;line-height:1.3;margin:0 0 6px}
+ #capa .meta{color:var(--mut);font-size:.8rem;word-break:break-word}
+ #capa p{margin:.7em 0}
+ #capa details{margin:.6em 0;font-size:.93rem}#capa summary{cursor:pointer;color:var(--ag)}
+ #capa .nota{font-size:.8rem;color:var(--mut);border-top:1px solid var(--line);padding-top:8px;margin-top:12px}
+ #capa a{color:var(--ag)}
+ #texto{padding:0 16px;max-width:76ch;font-size:17px;line-height:1.75}
+ .pag{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);
+  margin:22px 10px 6px;border-bottom:1px solid var(--line)}
+ .b{padding:4px 10px;border-radius:4px;cursor:pointer;border-left:3px solid transparent}
+ .b:hover{border-left-color:var(--line)}
+ .b.lendo{background:var(--lendo);border-left-color:var(--ag)}
+ .b p{margin:0 0 .75em}.b p:last-child{margin-bottom:.3em}
+ #boasvindas{padding:40px 26px;max-width:60ch}
+
+ /* tutor */
+ #conversa{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:8px;padding-right:4px;font-size:.92rem}
+ .m{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:9px 13px}
+ .m.voce{align-self:flex-end;background:var(--ag2);border-color:transparent;max-width:92%}
+ .m.tutor{border-left:3px solid var(--ag)}
+ .m p{margin:0 0 .6em}.m p:last-child{margin-bottom:0}
+ .m ul{margin:.3em 0 .6em;padding-left:1.2em}
+ .m code{font-size:.9em;background:var(--bg);padding:1px 5px;border-radius:3px}
+ .m hr{border:0;border-top:1px solid var(--line);margin:.6em 0}
+ .doc{color:var(--ag);cursor:pointer;border-bottom:1px dotted var(--ag)}
+ #status{font-size:.8rem;color:var(--mut);min-height:1.2em}
+ label.marca{font-size:.8rem;color:var(--mut);display:flex;gap:6px;align-items:center;cursor:pointer}
+ label.marca input{width:auto}
+</style>
+
+<div class="col" id="c-estante">
+  <h2>Biblioteca <span><a href="/">banca</a><a href="/tutor">tutor</a></span></h2>
+  <input id="filtro" placeholder="procurar por título ou assunto…" oninput="listar()" autocomplete="off">
+  <div id="lista" class="caixa"></div>
+  <details id="adicionar" class="caixa">
+    <summary>Adicionar documentos</summary>
+    <div class="barra">
+      <select id="base" aria-label="Base de destino"></select>
+      <input type="file" id="arquivos" accept="application/pdf,.pdf" multiple style="flex:1;min-width:0">
+    </div>
+    <div class="barra">
+      <button onclick="enviar()">Enviar PDFs</button>
+      <button class="pri" id="b-atualizar" onclick="atualizar()">Indexar e atualizar o grafo</button>
+    </div>
+    <div id="pend"></div>
+    <div id="recado"></div>
+    <pre id="diario" hidden></pre>
+  </details>
+</div>
+
+<div class="col" id="c-leitor">
+  <h2>Leitura</h2>
+  <div id="leitor" class="caixa">
+    <div id="tocador" class="barra" hidden>
+      <button class="pri" id="b-ouvir" onclick="alternar()">▶ Ouvir</button>
+      <button onclick="pular(-1)" title="trecho anterior" aria-label="Trecho anterior">⏮</button>
+      <button onclick="pular(1)" title="próximo trecho" aria-label="Próximo trecho">⏭</button>
+      <select id="voz" aria-label="Voz" onchange="trocarVoz()"></select>
+      <select id="ritmo" aria-label="Velocidade" onchange="trocarRitmo()">
+        <option value="0.85">0,85×</option><option value="1" selected>1×</option>
+        <option value="1.15">1,15×</option><option value="1.3">1,3×</option><option value="1.5">1,5×</option>
+      </select>
+      <span class="onde" id="onde"></span>
+      <span id="recado-voz" role="status"></span>
+    </div>
+    <div id="capa"></div>
+    <div id="texto"></div>
+    <div id="boasvindas" class="vazio">Escolha um documento à esquerda para ler. Dá para ouvir o texto
+      e ir perguntando ao tutor aqui ao lado, sem sair da página.</div>
+  </div>
+  <audio id="som" preload="auto"></audio>
+</div>
+
+<div class="col" id="c-tutor">
+  <h2>Tutor <a href="/tutor">abrir com o mapa →</a></h2>
+  <div id="conversa"></div>
+  <div id="status"></div>
+  <textarea id="txt" placeholder="Pergunte enquanto lê…  (Cmd+Enter envia)"></textarea>
+  <div class="barra">
+    <button class="pri" id="b-perguntar" onclick="perguntar()">Perguntar</button>
+    <label class="marca"><input type="checkbox" id="sobre" checked> sobre o documento aberto</label>
+  </div>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const SILENCIO = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=';
+const NOMES_BASE = {artigos:'Artigos', livros:'Livros e bibliografia'};
+let docs = [], porId = {}, aberto = null, blocos = [], atual = -1, tocando = false, vez = 0;
+let prontos = new Map(), historico = [], perguntando = false, vigia = null, recadoFixo = false;
+
+/* ---------- estante ---------- */
+async function carregar(){
+  const d = await fetch('/biblioteca/documentos').then(r => r.json());
+  docs = d.documentos; porId = {}; for (const x of docs) porId[x.id] = x;
+  if (!$('base').options.length){
+    $('base').innerHTML = d.bases.map(b => `<option value="${esc(b)}">${esc(NOMES_BASE[b] || b)}</option>`).join('');
+    const nav = 'speechSynthesis' in window
+      ? '<option value="nav:en-US">Navegador · inglês</option><option value="nav:pt-BR">Navegador · português</option>' : '';
+    $('voz').innerHTML = d.vozes.map(v => `<option value="${esc(v)}">Xiaomi · ${esc(v)}</option>`).join('') + nav;
+    try{
+      const v = localStorage.getItem('biblioteca.voz'), r = localStorage.getItem('biblioteca.ritmo');
+      if (v && [...$('voz').options].some(o => o.value === v)) $('voz').value = v;
+      if (r) $('ritmo').value = r;
+    }catch(e){}
+  }
+  listar(); pendentes(d.pendentes);
+}
+function listar(){
+  const q = $('filtro').value.trim().toLowerCase();
+  const serve = d => !q || [d.titulo, d.descricao, d.id].some(t => (t || '').toLowerCase().includes(q));
+  let html = '';
+  for (const base of [...new Set(docs.map(d => d.base))]){
+    const itens = docs.filter(d => d.base === base && serve(d));
+    if (!itens.length) continue;
+    html += `<h3>${esc(NOMES_BASE[base] || base)} · ${itens.length}</h3>` + itens.map(d =>
+      `<div class="item${aberto && aberto.arquivo === d.arquivo ? ' aberto' : ''}" onclick="abrir('${d.id}')">
+         <span class="id">${d.id}</span><span>${esc(d.titulo)}<small>${d.trechos} trechos${d.tem_pdf ? ' · PDF' : ''}</small></span></div>`).join('');
+  }
+  $('lista').innerHTML = html || '<div class="item vazio">nada com esse nome</div>';
+}
+function pendentes(p){
+  const nomes = Object.entries(p).flatMap(([base, lista]) => lista.map(n => `<b>${esc(n)}</b> (${esc(base)})`));
+  $('pend').innerHTML = nomes.length ? 'Aguardando indexação: ' + nomes.join(', ') : '';
+  if (nomes.length) $('adicionar').open = true;
+}
+
+/* ---------- leitura ---------- */
+async function abrir(id){
+  parar();
+  const r = await fetch('/biblioteca/documentos/' + encodeURIComponent(id));
+  if (!r.ok){ $('boasvindas').hidden = false; $('boasvindas').textContent = 'Esse documento não está na biblioteca.'; return; }
+  const d = await r.json();
+  for (const url of prontos.values()) Promise.resolve(url).then(u => URL.revokeObjectURL(u)).catch(() => {});
+  prontos = new Map(); aberto = d; blocos = d.blocos; atual = -1;
+  try{ history.replaceState(null, '', '#' + d.id); }catch(e){}
+  $('boasvindas').hidden = true; $('tocador').hidden = false;
+  const pdf = d.tem_pdf
+    ? `<a href="/biblioteca/documentos/${encodeURIComponent(d.id)}/pdf" target="_blank" rel="noopener">Abrir o PDF original</a> para ver figuras, tabelas e referências.`
+    : 'O PDF original não está neste computador.';
+  $('capa').innerHTML = `<h1>${esc(d.titulo)}</h1>
+    <div class="meta">${d.id} · ${esc(NOMES_BASE[d.base] || d.base)} · ${d.trechos} trechos · ${esc(d.arquivo)}</div>
+    ${d.descricao ? `<p>${esc(d.descricao)}</p>` : '<p class="vazio">Ainda sem descrição no catálogo.</p>'}
+    ${d.resumo ? `<details><summary>Resumo do documento</summary><p>${esc(d.resumo)}</p></details>` : ''}
+    <div class="nota">Abaixo está o texto que a busca e o tutor usam: sem cabeçalhos, tabelas, figuras e lista de referências. ${pdf}</div>`;
+  let html = '', pagina = null;
+  for (const b of blocos){
+    if (b.pagina !== pagina){ pagina = b.pagina; if (pagina) html += `<div class="pag">página ${pagina}</div>`; }
+    html += `<div class="b" id="b${b.numero}" onclick="tocarDe(${b.numero}, true)" title="ouvir a partir daqui">`
+      + b.texto.split('\n\n').map(p => '<p>' + esc(p) + '</p>').join('') + '</div>';
+  }
+  $('texto').innerHTML = html || '<p class="vazio" style="padding:0 10px">Sem texto extraído para este documento.</p>';
+  $('leitor').scrollTop = 0; onde(); listar();
+}
+function onde(){
+  $('onde').textContent = blocos.length ? (atual >= 0 ? `trecho ${atual + 1} de ${blocos.length}` + (blocos[atual].pagina ? ` · p. ${blocos[atual].pagina}` : '') : `${blocos.length} trechos`) : '';
+}
+function marcar(n){
+  document.querySelectorAll('.b.lendo').forEach(e => e.classList.remove('lendo'));
+  const el = $('b' + n); if (!el) return;
+  el.classList.add('lendo'); el.scrollIntoView({block:'center', behavior:'smooth'}); onde();
+}
+
+/* ---------- voz ---------- */
+function audioDe(n, voz){
+  const chave = n + '|' + voz;
+  if (!prontos.has(chave)){
+    const url = `/biblioteca/documentos/${encodeURIComponent(aberto.id)}/audio/${n}?voz=${encodeURIComponent(voz)}`;
+    prontos.set(chave, fetch(url).then(async r => {
+      if (!r.ok){ let m = 'erro ' + r.status; try{ m = (await r.json()).erro || m; }catch(e){} throw new Error(m); }
+      return URL.createObjectURL(await r.blob());
+    }).catch(e => { prontos.delete(chave); throw e; }));
+  }
+  return prontos.get(chave);
+}
+function botao(){ $('b-ouvir').textContent = tocando ? '⏸ Pausar' : '▶ Ouvir'; }
+function parar(){
+  tocando = false; vez++;
+  const som = $('som'); som.pause();
+  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  botao(); leitura('');
+}
+function limparRecado(){ recadoFixo = false; $('recado-voz').textContent = ''; }
+function alternar(){ tocando ? parar() : tocarDe(atual < 0 ? 0 : atual, true); }
+function pular(passo){
+  if (!blocos.length) return;
+  const n = Math.min(blocos.length - 1, Math.max(0, (atual < 0 ? 0 : atual) + passo));
+  if (tocando) tocarDe(n, true); else { atual = n; marcar(n); }
+}
+function tocarDe(n, gesto){
+  if (!blocos.length) return;
+  if (window.getSelection && String(getSelection()).length > 2) return;      // selecionando texto, não é para tocar
+  parar(); limparRecado(); atual = n; tocando = true; botao();
+  if (gesto && !$('voz').value.startsWith('nav:')){                        // destrava o áudio dentro do clique (Safari)
+    const som = $('som'); som.src = SILENCIO; som.play().catch(() => {});
+  }
+  tocar();
+}
+async function tocar(){
+  if (!tocando) return;
+  if (atual >= blocos.length){ atual = blocos.length - 1; parar(); return; }
+  const n = atual, voz = $('voz').value, ficha = ++vez;
+  marcar(n);
+  if (voz.startsWith('nav:')) return falarNoNavegador(n, voz.slice(4), ficha);
+  leitura('preparando a voz…');
+  try{
+    const url = await audioDe(n, voz);
+    if (ficha !== vez) return;
+    const som = $('som');
+    som.src = url; som.playbackRate = +$('ritmo').value;
+    som.onended = () => { if (ficha === vez){ atual++; tocar(); } };
+    await som.play(); leitura('');
+    if (n + 1 < blocos.length) audioDe(n + 1, voz).catch(() => {});       // adianta o próximo trecho
+  }catch(e){
+    if (ficha !== vez) return;
+    if ('speechSynthesis' in window){
+      leitura('A voz da Xiaomi não respondeu (' + e.message + '). Seguindo com a voz do navegador.', true);
+      $('voz').value = 'nav:en-US'; tocar();
+    } else { parar(); leitura('A voz da Xiaomi não respondeu: ' + e.message, true); }
+  }
+}
+function falarNoNavegador(n, idioma, ficha){
+  const fala = new SpeechSynthesisUtterance(blocos[n].texto.replace(/\s*\[\d{1,3}(\s*[,–-]\s*\d{1,3})*\]/g, ''));
+  fala.lang = idioma; fala.rate = +$('ritmo').value;
+  fala.onend = () => { if (ficha === vez && tocando){ atual++; tocar(); } };
+  speechSynthesis.speak(fala);
+}
+function leitura(texto, fixo){
+  if (!fixo && recadoFixo) return;                 // o aviso de falha fica até a pessoa mexer no tocador
+  recadoFixo = !!fixo; $('recado-voz').textContent = texto;
+}
+function trocarVoz(){
+  try{ localStorage.setItem('biblioteca.voz', $('voz').value); }catch(e){}
+  if (tocando) tocarDe(atual, true);
+}
+function trocarRitmo(){
+  try{ localStorage.setItem('biblioteca.ritmo', $('ritmo').value); }catch(e){}
+  $('som').playbackRate = +$('ritmo').value;
+  if (tocando && $('voz').value.startsWith('nav:')) tocarDe(atual, true);
+}
+
+/* ---------- adicionar e atualizar ---------- */
+function recado(t){ $('recado').textContent = t; }
+async function enviar(){
+  const arquivos = [...$('arquivos').files];
+  if (!arquivos.length){ recado('Escolha um ou mais PDFs primeiro.'); return; }
+  const base = $('base').value; let enviados = 0; const falhas = [];
+  for (const arquivo of arquivos){
+    recado(`enviando ${arquivo.name}…`);
+    try{
+      const r = await fetch(`/biblioteca/enviar?base=${encodeURIComponent(base)}&nome=${encodeURIComponent(arquivo.name)}`,
+        {method:'POST', headers:{'Content-Type':'application/pdf'}, body: arquivo});
+      const d = await r.json();
+      if (!r.ok) throw new Error(d.erro || d.detail || r.status);
+      enviados++;
+    }catch(e){ falhas.push(`${arquivo.name}: ${e.message}`); }
+  }
+  $('arquivos').value = '';
+  recado(`${enviados} enviado(s).` + (falhas.length ? ' Não entrou: ' + falhas.join('; ') : '')
+    + (enviados ? ' Agora clique em "Indexar e atualizar o grafo".' : ''));
+  carregar();
+}
+async function atualizar(){
+  const r = await fetch('/biblioteca/atualizar', {method:'POST'});
+  if (!r.ok && r.status !== 409){ recado('Não deu para começar: erro ' + r.status); return; }
+  recado('atualizando… pode continuar lendo, isso leva alguns minutos.'); vigiar();
+}
+function vigiar(){ if (!vigia) vigia = setInterval(acompanhar, 1500); acompanhar(); }
+async function acompanhar(){
+  const e = await fetch('/biblioteca/atualizacao').then(r => r.json()).catch(() => null);
+  if (!e) return;
+  $('b-atualizar').disabled = e.ocupada;
+  if (e.linhas.length){ const d = $('diario'); d.hidden = false; d.textContent = e.linhas.join('\n'); d.scrollTop = d.scrollHeight; }
+  if (e.ocupada){ $('adicionar').open = true; if (!vigia) vigiar(); return; }
+  if (vigia){
+    clearInterval(vigia); vigia = null;
+    recado(e.erro ? 'A atualização parou com erro: ' + e.erro
+      : e.novos.length ? `Pronto: ${e.novos.length} documento(s) novo(s) na base e no grafo.` : 'Nada novo para indexar.');
+    carregar();
+  }
+}
+
+/* ---------- tutor ---------- */
+function aviso(t){ $('status').textContent = t; }
+function inline(s){
+  return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code>$1</code>')
+    .replace(/\b([AL]\d{1,3})\b/g, (m, id) => porId[id] ? `<span class="doc" onclick="abrir('${id}')" title="${esc(porId[id].titulo)}">${id}</span>` : m);
+}
+function formatar(texto){
+  return texto.trim().split(/\n{2,}/).map(b => {
+    const linhas = b.split('\n');
+    if (/^\s*(-{3,}|\*{3,}|_{3,})\s*$/.test(b)) return '<hr>';
+    if (/^#{1,6}\s+/.test(b)) return '<p><b>' + inline(b.replace(/^#{1,6}\s+/, '')) + '</b></p>';
+    if (linhas.every(l => /^\s*[-*•]\s+/.test(l)))
+      return '<ul>' + linhas.map(l => '<li>' + inline(l.replace(/^\s*[-*•]\s+/, '')) + '</li>').join('') + '</ul>';
+    return '<p>' + inline(b).replace(/\n/g, '<br>') + '</p>';
+  }).join('');
+}
+function mostrar(quem, texto){
+  const el = document.createElement('div'); el.className = 'm ' + quem;
+  el.innerHTML = quem === 'tutor' ? formatar(texto) : '<p>' + esc(texto).replace(/\n/g, '<br>') + '</p>';
+  $('conversa').appendChild(el); $('conversa').scrollTop = $('conversa').scrollHeight;
+}
+function conversaGuardada(){
+  try{ historico = JSON.parse(localStorage.getItem('tutor.historico') || '[]'); }catch(e){ historico = []; }
+  for (const m of historico) mostrar(m.role === 'user' ? 'voce' : 'tutor', m.content);
+  if (!historico.length) $('conversa').innerHTML = '<div class="m tutor vazio" id="convite">A conversa daqui é a mesma da página do tutor: o que você perguntar lendo continua lá.</div>';
+}
+async function perguntar(){
+  const digitado = $('txt').value.trim();
+  if (!digitado || perguntando) return;
+  const pergunta = $('sobre').checked && aberto ? `Sobre o documento ${aberto.id} (${aberto.titulo}): ${digitado}` : digitado;
+  perguntando = true; $('b-perguntar').disabled = true; $('txt').value = '';
+  const convite = $('convite'); if (convite) convite.remove();
+  mostrar('voce', pergunta); aviso('o tutor está lendo…');
+  try{
+    const r = await fetch('/tutor/perguntar', {method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({pergunta, historico: historico.map(m => ({role:m.role, content:m.content}))})});
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.erro || d.detail || r.status);
+    historico.push({role:'user', content:pergunta}, {role:'assistant', content:d.resposta, buscas:d.buscas, conceitos:d.conceitos});
+    try{ localStorage.setItem('tutor.historico', JSON.stringify(historico.slice(-40))); }catch(e){}
+    mostrar('tutor', d.resposta); aviso('');
+  }catch(e){ aviso('erro: ' + e.message); }
+  perguntando = false; $('b-perguntar').disabled = false;
+}
+$('txt').addEventListener('keydown', e => { if ((e.metaKey || e.ctrlKey) && e.key === 'Enter') perguntar(); });
+
+carregar().then(() => {
+  conversaGuardada(); acompanhar();
+  const id = decodeURIComponent(location.hash.slice(1)); if (id && porId[id]) abrir(id);
+});
+</script>
