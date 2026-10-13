@@ -48,7 +48,8 @@
    "descricao": "Sensor inercial posicionado na região lombar (entre L3-L5) para capturar acelerações do movimento.",
    "apelidos": [
     "unidade de medição inercial (imu)",
-    "sensor inercial (IMU)"
+    "sensor inercial (IMU)",
+    "unidade de medição inercial (IMU) LSM6DS3TR-C"
    ],
    "origens": [
     {
@@ -113,6 +114,26 @@
     },
     {
      "arquivo": "Strapdown Inertial Navigation Technology (IEE Radar, Sonar, Navigation and Avionics Series) (David Titterton , John Weston) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
      "pagina": null
     }
    ]
@@ -315,10 +336,16 @@
    "nome": "acurácia",
    "tipo": "metrica",
    "descricao": "Métrica de avaliação que variou de 75,6% a 98,23% nos diferentes modelos estudados.",
-   "apelidos": [],
+   "apelidos": [
+    "acurácia (accuracy)"
+   ],
    "origens": [
     {
      "arquivo": "Deep_Learning_in_Human_Activity_Recognition_with_Wearable_Sensors_A_Review_on_Advances.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
      "pagina": null
     }
    ]
@@ -2443,6 +2470,1426 @@
    "origens": [
     {
      "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "dado-sem-fio-de-baixo-consumo-ble": {
+   "nome": "dado sem fio de baixo consumo (BLE)",
+   "tipo": "conceito",
+   "descricao": "Protocolo com alcance estável indoors até 40 m em LOS e eficiência média de 99–103,71%.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "forca-de-sinal-rssi": {
+   "nome": "força de sinal (RSSI)",
+   "tipo": "metrica",
+   "descricao": "Varia de −29 a −74 dBm abaixo de 1 m, com elevada dispersão mesmo a curta distância.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "perda-de-aquisicao": {
+   "nome": "perda de aquisição",
+   "tipo": "metrica",
+   "descricao": "Mediana ~0%, entre 0,56% e −2,05%, dentro do ±5% aceitável para BLE.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sincronizacao-por-interpolacao": {
+   "nome": "sincronização por interpolação",
+   "tipo": "metodo",
+   "descricao": "Alinha as amostras de 50 Hz para 15.000 pontos por IMU.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "modelo-fuzzy-mamdani": {
+   "nome": "modelo fuzzy Mamdani",
+   "tipo": "metodo",
+   "descricao": "Adapta a avaliação RULA, com saída Total C de 3 a 7, em Grupos A e B e modelo combinado.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "avaliacao-postural-rula": {
+   "nome": "avaliação postural RULA",
+   "tipo": "conceito",
+   "descricao": "Método adaptado por modelo fuzzy Mamdani para Grupos A (ombro) e B (tronco).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "grupo-a": {
+   "nome": "grupo A",
+   "tipo": "conceito",
+   "descricao": "Modelo fuzzy cobrindo flexão/extensão e abdução do ombro.",
+   "apelidos": [
+    "grupo B"
+   ],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "indice-kappa": {
+   "nome": "índice Kappa",
+   "tipo": "metrica",
+   "descricao": "Mede a concordância entre o sistema fuzzy (FIS) e três avaliadores humanos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "voluntarios-saudaveis": {
+   "nome": "voluntários saudáveis",
+   "tipo": "segmento_corporal",
+   "descricao": "Amostra de 25 indivíduos (15 F, 10 M, 20–40 anos, destros) em três posturas sentadas.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "risco-postural": {
+   "nome": "risco postural",
+   "tipo": "conceito",
+   "descricao": "Classificado como médio, alto ou severo; experimento 2 mostrou >3,5 min em risco alto.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "modulo-inercial-inertial-module": {
+   "nome": "módulo inercial (inertial module)",
+   "tipo": "dispositivo",
+   "descricao": "módulo MEMS inercial LSM6DS3TR-C com acelerômetro e giroscópio 3D digitais",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "giroscopio-3d-3d-gyroscope": {
+   "nome": "giroscópio 3D (3D gyroscope)",
+   "tipo": "dispositivo",
+   "descricao": "giroscópio digital com ODR de 12,5 Hz a 6,66 kHz, LPF1 configurável e sensibilidade de ±2000 dps de 1 LSB = 70 mdps no self-test",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "acelerometro-3d-3d-accelerometer": {
+   "nome": "acelerômetro 3D (3D accelerometer)",
+   "tipo": "dispositivo",
+   "descricao": "acelerômetro digital cuja sensibilidade pode ser calibrada aplicando ±1 g por rotação de 180°",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "memoria-fifo-fifo": {
+   "nome": "memória FIFO (FIFO)",
+   "tipo": "dispositivo",
+   "descricao": "FIFO inteligente até 4 kbyte com cinco modos (Bypass, FIFO, Continuous, Continuous-to-FIFO, Bypass-to-Continuous), threshold programável e decimação por dataset",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "threshold-fifo-fth": {
+   "nome": "threshold FIFO (FTH)",
+   "tipo": "grandeza",
+   "descricao": "limiar do FIFO programável via FTH_[10:0] em FIFO_CTRL1/2",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "pedometro-pedometer": {
+   "nome": "pedômetro (pedometer)",
+   "tipo": "metodo",
+   "descricao": "função embutida de contagem de passos com STEP_COUNT_DELTA de 1 LSB = 1,6384 s",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "absolute-wrist-tilt": {
+   "nome": "Absolute Wrist Tilt",
+   "tipo": "metodo",
+   "descricao": "função em hardware que exige 26 Hz ou mais, com threshold de 1 LSB = 15,625 mg e latência de 1 LSB = 40 ms",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-hub": {
+   "nome": "sensor hub",
+   "tipo": "conceito",
+   "descricao": "interface para até 4 sensores externos com registradores SENSORHUB1..18",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "registrador-ctrl3-c": {
+   "nome": "registrador CTRL3_C",
+   "tipo": "conceito",
+   "descricao": "registrador (12h) que controla BDU, polaridade e tipo de interrupt, SIM e incremento automático de endereço",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "comunicacao-i2c-fast-mode": {
+   "nome": "comunicação I2C fast mode",
+   "tipo": "metodo",
+   "descricao": "interface digital via I2C fast mode a 400 kHz",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "comunicacao-spi": {
+   "nome": "comunicação SPI",
+   "tipo": "metodo",
+   "descricao": "interface digital via SPI 4/3 fios",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "saida-de-temperatura-temperature-output": {
+   "nome": "saída de temperatura (temperature output)",
+   "tipo": "metrica",
+   "descricao": "saída de temperatura codificada em complemento de dois",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "tap-detection": {
+   "nome": "tap detection",
+   "tipo": "metodo",
+   "descricao": "função embutida de detecção de toque com durações relativas a ODR_XL",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "microcontrolador-seeed-studio-xiao-nrf52840-sense": {
+   "nome": "microcontrolador Seeed Studio XIAO-nRF52840 Sense",
+   "tipo": "dispositivo",
+   "descricao": "Microcontrolador com ARM Cortex-M4 e BLE 5.0 (22mm x 17.5mm) que captura dados e executa a inferência em tempo real.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aceleracao": {
+   "nome": "aceleração",
+   "tipo": "grandeza",
+   "descricao": "Grandeza medida pelo acelerômetro do IMU, usada na extração de features.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "velocidade-angular": {
+   "nome": "velocidade angular",
+   "tipo": "grandeza",
+   "descricao": "Grandeza medida pelo giroscópio do IMU, usada na extração de features.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sliding-window": {
+   "nome": "sliding window",
+   "tipo": "metodo",
+   "descricao": "Pré-processamento com janela de 2 segundos e passo de 80 ms, gerando 101 amostras por série de 10 s.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "extracao-de-features-feature-extraction": {
+   "nome": "extração de features (feature extraction)",
+   "tipo": "metodo",
+   "descricao": "Extração de 39 features via RMS e FFT, além de média e desvio padrão da aceleração e velocidade angular.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "rede-neural-densa-dnn": {
+   "nome": "rede neural densa (DNN)",
+   "tipo": "metodo",
+   "descricao": "Modelo de 4 camadas com 39 entradas, duas camadas ocultas de 20 e 10 neurônios com ativação ReLU e saída de 4 classes.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "walking-caminhar": {
+   "nome": "walking (caminhar)",
+   "tipo": "exercicio",
+   "descricao": "Uma das 4 atividades classificadas, com acerto de 98,5% no conjunto de teste.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "stationary-parado": {
+   "nome": "stationary (parado)",
+   "tipo": "exercicio",
+   "descricao": "Atividade classificada com 100% de acerto na validação e probabilidade 0,99609 na inferência em tempo real para um estado parado.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "going-upstairs-subir-escadas": {
+   "nome": "going upstairs (subir escadas)",
+   "tipo": "exercicio",
+   "descricao": "Atividade classificada, com confusões concentradas junto com Going Downstairs no conjunto de teste.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "going-downstairs-descer-escadas": {
+   "nome": "going downstairs (descer escadas)",
+   "tipo": "exercicio",
+   "descricao": "Atividade com 98,1% de acerto na validação e queda para 93,2% no conjunto de teste.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "intervalo-de-conexao-connection-interval": {
+   "nome": "intervalo de conexão (connection interval)",
+   "tipo": "grandeza",
+   "descricao": "Parâmetro de conexão definido entre 7,5 ms e 4 s, com impacto direto no consumo de energia.",
+   "apelidos": [
+    "intervalo de conexão (connInterval)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "consumo-de-energia": {
+   "nome": "consumo de energia",
+   "tipo": "grandeza",
+   "descricao": "Grandeza afetada diretamente pelo intervalo de conexão e pelo tempo com o rádio ligado durante o scan.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "controlador": {
+   "nome": "controlador",
+   "tipo": "conceito",
+   "descricao": "Camada de hardware de um dispositivo BLE, parte da arquitetura dividida em controlador, host e aplicação.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "host": {
+   "nome": "host",
+   "tipo": "conceito",
+   "descricao": "Camada intermediária de um dispositivo BLE, junto de controlador e aplicação.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sistema-num-chip-soc": {
+   "nome": "sistema num chip (SoC)",
+   "tipo": "dispositivo",
+   "descricao": "Chip moderno que integra controlador, host e aplicação com CPU de baixo consumo.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "hierarquia-gatt": {
+   "nome": "hierarquia GATT",
+   "tipo": "conceito",
+   "descricao": "Modelo de dados com hierarquia estrita de services → characteristics → descriptors.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "handle": {
+   "nome": "handle",
+   "tipo": "metrica",
+   "descricao": "Identificador único de 16 bits por atributo, com até 65535 handles possíveis (0xFFFE) por servidor.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "att-mtu": {
+   "nome": "ATT_MTU",
+   "tipo": "grandeza",
+   "descricao": "Tamanho máximo de pacote padrão de 23 bytes, com negociação de MTU permitindo pacotes maiores fragmentados via L2CAP.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "l2cap": {
+   "nome": "L2CAP",
+   "tipo": "conceito",
+   "descricao": "Camada que fragmenta pacotes maiores que o ATT_MTU padrão de 23 bytes.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "heart-rate-service-hrs": {
+   "nome": "Heart Rate Service (HRS)",
+   "tipo": "conceito",
+   "descricao": "Serviço BLE com UUID 0x180D, com declaração de serviço primário usando UUID padrão 0x2800.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "pareamento": {
+   "nome": "pareamento",
+   "tipo": "metodo",
+   "descricao": "Procedimento de segurança que, junto da vinculação, autenticação e autorização, forma dois pilares construídos desde o Bluetooth 4.0.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ibeacon": {
+   "nome": "iBeacon",
+   "tipo": "conceito",
+   "descricao": "Formato que usa o campo Manufacturer Specific Data para transmitir UUID de 128 bits e dois valores de 16 bits.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "nrf51": {
+   "nome": "nRF51",
+   "tipo": "dispositivo",
+   "descricao": "Hardware Nordic com 128/256 KB flash, 80-90 KB ocupados pela pilha S110.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "cc2541": {
+   "nome": "CC2541",
+   "tipo": "dispositivo",
+   "descricao": "Hardware TI com 128/256 KB flash, compatível com CC2540 que adiciona USB, com pilha BLE completa da spec 4.0.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensortag": {
+   "nome": "SensorTag",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo da TI usado em app Android, com acelerômetro ativado escrevendo 0x01 na characteristic de configuração e uso de notificações.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "faixa-de-escala-total-full-scale": {
+   "nome": "faixa de escala total (full-scale)",
+   "tipo": "grandeza",
+   "descricao": "Faixas configuráveis de 2/4/8/16 g para acelerómetro e 245/500/1000/2000 dps para giroscópio, ajustadas via registros FS_XL e FS_G",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensibilidade-do-sensor": {
+   "nome": "sensibilidade do sensor",
+   "tipo": "metrica",
+   "descricao": "Obtida pela relação entre a faixa de escala total e o LSB, com mapeamento no datasheet",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "pino-sa0": {
+   "nome": "pino SA0",
+   "tipo": "dispositivo",
+   "descricao": "Pino aterrado que fixa o endereço I2C do IMU em 0x6A",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "registrador-fs-xl": {
+   "nome": "registrador FS_XL",
+   "tipo": "dispositivo",
+   "descricao": "Registrador de configuração da faixa de escala do acelerômetro do IMU",
+   "apelidos": [
+    "registrador FS_G"
+   ],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "biblioteca-seeed-nrf52-mbed-enabled": {
+   "nome": "biblioteca Seeed nRF52 mbed-enabled",
+   "tipo": "metodo",
+   "descricao": "Recomendada pela Seeed para aplicações de machine learning embutido e uso do IMU/PDM",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "placa-xiao-nrf52840-sense-plus": {
+   "nome": "placa XIAO nRF52840 Sense/Plus",
+   "tipo": "dispositivo",
+   "descricao": "Placa com Nordic nRF52840 (ARM Cortex-M4F a 64 MHz), Bluetooth 5.0 e dimensões 21x17.8mm",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "microfone-pdm": {
+   "nome": "microfone PDM",
+   "tipo": "dispositivo",
+   "descricao": "Componente presente na versão Sense da placa",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "divisor-de-tensao-da-bateria": {
+   "nome": "divisor de tensão da bateria",
+   "tipo": "dispositivo",
+   "descricao": "Circuito de revisão 2:1 com resistores 1 MΩ/510 kΩ, habilitado por P0.14 e lido por P0.31",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "pino-p0-31": {
+   "nome": "pino P0.31",
+   "tipo": "dispositivo",
+   "descricao": "Pino ADC de leitura de bateria com limite de tensão de 3.6V",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "chip-do-carregador-bq25101": {
+   "nome": "chip do carregador BQ25101",
+   "tipo": "dispositivo",
+   "descricao": "Chip real do carregador, após correção de errata no esquemático",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "codigo-de-startup-cstart": {
+   "nome": "código de startup (cstart)",
+   "tipo": "metodo",
+   "descricao": "Configura vetores de exceção, periféricos críticos, stack, variáveis e construtores C++ antes do main (p. 30).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "custo-em-ciclos-de-interrupcao": {
+   "nome": "custo em ciclos de interrupção",
+   "tipo": "metrica",
+   "descricao": "Processador de 30 MHz tratando áudio a 44.100 Hz com latência de 10 ciclos gasta 1,47% dos ciclos só chamando o handler (p. 151).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "implementacao-bit-a-bit-de-spi": {
+   "nome": "implementação bit-a-bit de SPI",
+   "tipo": "metodo",
+   "descricao": "Usa timer interrompendo a 4× a frequência de clock desejada, gerando tons de context switching (p. 209).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "buffer-circular": {
+   "nome": "buffer circular",
+   "tipo": "dispositivo",
+   "descricao": "Usado junto com FIFOs e flags full/empty/half full/half empty para comunicação (p. 218, 229).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "injecao-de-dependencia-dependency-injection": {
+   "nome": "injeção de dependência (dependency injection)",
+   "tipo": "metodo",
+   "descricao": "Desacopla código de LED do hardware de I/O (p. 129).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "objeto-ativo-active-object": {
+   "nome": "objeto ativo (active object)",
+   "tipo": "conceito",
+   "descricao": "Implementado como máquina de estados orientada a eventos no padrão actor (p. 197).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "padrao-factory": {
+   "nome": "padrão factory",
+   "tipo": "metodo",
+   "descricao": "Desacopla instâncias de um ideal genérico (p. 240).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "acesso-desalinhado": {
+   "nome": "acesso desalinhado",
+   "tipo": "fenomeno",
+   "descricao": "Pode funcionar, gerar hard fault ou custar ciclos extras dependendo do processador e compilador (p. 271).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aviso-do-compilador": {
+   "nome": "aviso do compilador",
+   "tipo": "conceito",
+   "descricao": "Habilitar todos os avisos teria evitado muitos hard faults (p. 281).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ram-overlay": {
+   "nome": "RAM overlay",
+   "tipo": "dispositivo",
+   "descricao": "Permite que subsistemas compartilhem a mesma memória; no exemplo, um buffer de 4 KB sem overlay faria o sistema não compilar (p. 323).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "aproximacao-por-polinomios-e-series-de-taylor": {
+   "nome": "aproximação por polinômios e séries de Taylor",
+   "tipo": "metodo",
+   "descricao": "Aproxima funções trigonométricas, raiz e log com termos finitos (p. 353).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fake-float": {
+   "nome": "fake float",
+   "tipo": "conceito",
+   "descricao": "Usa escalonamento binário com numerador de 32 bits e expoente de 8 bits para evitar divisões (p. 366).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "calibracao-termica": {
+   "nome": "calibração térmica",
+   "tipo": "metodo",
+   "descricao": "Deve ser esperada pois todos os sensores são também sensores de temperatura (p. 249).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "loop-com-sleep-entre-verificacoes-de-flags": {
+   "nome": "loop com sleep entre verificações de flags",
+   "tipo": "metodo",
+   "descricao": "Padrão recomendado para reduzir consumo, sugerindo experimento com interrupt de 2 Hz (p. 387).",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "bluetooth-de-baixo-energia-bluetooth-low-energy-ble": {
+   "nome": "Bluetooth de Baixo Energia (Bluetooth Low Energy - BLE)",
+   "tipo": "conceito",
+   "descricao": "Tecnologia de comunicação wireless cuja revisão sistematiza o desempenho em throughput, tamanho de piconet, consumo de energia, alcance e latência.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "throughput": {
+   "nome": "throughput",
+   "tipo": "metrica",
+   "descricao": "Métrica de desempenho cujo máximo teórico sem erros de bits é de 236,7 kbit/s com payload de 20 bytes.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "alcance": {
+   "nome": "alcance",
+   "tipo": "metrica",
+   "descricao": "Com potência de +8 dBm e sensibilidade de -70 dBm, a perda de caminho é +78 dB, correspondendo a ~33 m teóricos.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "latencia": {
+   "nome": "latência",
+   "tipo": "metrica",
+   "descricao": "Modelada durante a fase de descoberta (função de advInterval e scanInterval) e durante a conexão (ida e volta, em função de connInterval e BER).",
+   "apelidos": [
+    "latência (latency)"
+   ],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    },
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "intervalo-de-advertising-advinterval": {
+   "nome": "intervalo de advertising (advInterval)",
+   "tipo": "grandeza",
+   "descricao": "Parâmetro que influencia latência na fase de descoberta e consumo durante advertising; com advInterval mínimo de 20 ms o consumo médio é ~2,3 mA no CC2541.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "tamanho-do-piconet": {
+   "nome": "tamanho do piconet",
+   "tipo": "metrica",
+   "descricao": "Número máximo de escravos por mestre varia entre 2 e 11 com connInterval de 7,5 ms, e pode chegar a ~5900 com connInterval de 4000 ms em unidirecional.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "taxa-de-erro-de-bits-bit-error-rate-ber": {
+   "nome": "taxa de erro de bits (Bit Error Rate - BER)",
+   "tipo": "grandeza",
+   "descricao": "Parâmetro usado na modelagem de latência de ida e volta durante a conexão.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sincronizacao-de-nos": {
+   "nome": "sincronização de nós",
+   "tipo": "conceito",
+   "descricao": "Tópico que precisa de mais investigação devido aos atrasos não-determinísticos da arquitetura BLE.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "nrf51822": {
+   "nome": "nRF51822",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo que transmite até 6 pacotes por connInterval, atingindo ~125 kbit/s.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "bluenrg-ms": {
+   "nome": "BlueNRG-MS",
+   "tipo": "dispositivo",
+   "descricao": "Dispositivo da ST que envia 9 pacotes em um connInterval de 7,5 ms.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "acelerometro-triaxial-triaxial-accelerometer": {
+   "nome": "acelerómetro triaxial (triaxial accelerometer)",
+   "tipo": "grandeza",
+   "descricao": "eixos ax, ay, az capturados pelo MPU-6050 e enviados via data forwarder do Edge Impulse (p. 469)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "filtro-test-and-trace": {
+   "nome": "filtro test and trace",
+   "tipo": "metodo",
+   "descricao": "filtro com N predições e limiar 0,7 para estabilizar reconhecimento de gestos (p. 484)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "limiar-de-confianca-threshold": {
+   "nome": "limiar de confiança (threshold)",
+   "tipo": "metrica",
+   "descricao": "valor 0,7 aplicado no filtro test and trace sobre as predições (p. 484)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "quantizacao-em-8-bits-8-bit-quantization": {
+   "nome": "quantização em 8 bits (8-bit quantization)",
+   "tipo": "metodo",
+   "descricao": "redução de modelo LSTM para ~14 KB (~1% do flash) e CIFAR-10 para 81.208 bytes em dispositivo de 256 KB (p. 311, 516)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "ponto-fixo-q15": {
+   "nome": "ponto fixo Q15",
+   "tipo": "metodo",
+   "descricao": "implementação numérica via CMSIS-DSP com arm_mat_vec_mult_q15 e lookup table logarítmica pré-computada (p. 292, 326)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "lstm": {
+   "nome": "LSTM",
+   "tipo": "conceito",
+   "descricao": "rede recorrente com 14.984 parâmetros treináveis para classificação de gêneros musicais a partir de MFCC (p. 311)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "mfcc": {
+   "nome": "MFCC",
+   "tipo": "metrica",
+   "descricao": "features de áudio usadas como entrada da LSTM na Raspberry Pi Pico (p. 311)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "mel-frequency-energy-mfe": {
+   "nome": "Mel Frequency Energy (MFE)",
+   "tipo": "metodo",
+   "descricao": "representação espectral comparada com espectrograma FFT 'plano' no projeto KWS (p. 197, 216)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fft-plano-flat-fft-spectrogram": {
+   "nome": "FFT plano (flat FFT spectrogram)",
+   "tipo": "metodo",
+   "descricao": "representação espectral comparada com MFE no keyword spotting (p. 197)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "raspberry-pi-pico": {
+   "nome": "Raspberry Pi Pico",
+   "tipo": "dispositivo",
+   "descricao": "plataforma com 2 MB de programa e 64 KB de SRAM, usada no projeto de gêneros musicais (p. 533, 311)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "arduino-nano-33-ble-sense": {
+   "nome": "Arduino Nano 33 BLE Sense",
+   "tipo": "dispositivo",
+   "descricao": "plataforma com 2 MB de flash externo usada no projeto de keyword spotting (p. 60, 197)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "protocolo-esb-enhanced-shockburst": {
+   "nome": "protocolo esb (Enhanced ShockBurst)",
+   "tipo": "dispositivo",
+   "descricao": "Protocolo avaliado sob condições laboratoriais, entregando latência determinística sub-milissegundo",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "nrf5340": {
+   "nome": "nRF5340",
+   "tipo": "dispositivo",
+   "descricao": "Placa de desenvolvimento usada em par espaçado de 1 m, cujo hardware impediu usar fast ramp-up",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "taxa-de-sucesso": {
+   "nome": "taxa de sucesso",
+   "tipo": "metrica",
+   "descricao": "De 95.87% sem CRC, com 735 pacotes recebidos de 750 (1 duplicado, 15 corrompidos)",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "controle-de-redundancia-ciclica-crc": {
+   "nome": "controle de redundância cíclica (CRC)",
+   "tipo": "conceito",
+   "descricao": "Desabilitar produz menor latência, seguido por 8 bits e 16 bits",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "modo-dinamico-dynamic-protocol-mode": {
+   "nome": "modo dinâmico (dynamic protocol mode)",
+   "tipo": "metodo",
+   "descricao": "Selecionado por menor latência, com diferença de 8.85 µs vs. fixed",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "configuracao-otima-olcfg": {
+   "nome": "configuração ótima (OLCfg)",
+   "tipo": "metodo",
+   "descricao": "CRC desabilitado, protocol mode dynamic, bitrate 2 Mbit/s, TX mode manual, potência de saída 0 dBm",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "payload-pre-construida-no-net-core": {
+   "nome": "payload pré-construída no NET-core",
+   "tipo": "metodo",
+   "descricao": "Elimina transfers IPC e reduz latência vs. payload construída no APP-core e transferida via IPC",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "modo-ble-bluetooth-low-energy": {
+   "nome": "modo ble (Bluetooth Low Energy)",
+   "tipo": "conceito",
+   "descricao": "Connection interval mínimo de 7.5 ms, com latência variando de quase zero a um intervalo completo sem controle na camada de aplicação",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "fast-ramp-up": {
+   "nome": "fast ramp-up",
+   "tipo": "conceito",
+   "descricao": "Recurso que poderia reduzir ainda mais a latência, mas foi impedido pelo hardware nRF5340",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "eficiencia-energetica": {
+   "nome": "eficiência energética",
+   "tipo": "metrica",
+   "descricao": "Degrada porque o RX ESB deve permanecer ativo escutando",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "body-shadowing": {
+   "nome": "body shadowing",
+   "tipo": "fenomeno",
+   "descricao": "Fenômeno a investigar em trabalho futuro, junto com interferência externa",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "acelerometro-de-tres-eixos-three-axis-accelerometer": {
+   "nome": "acelerômetro de três eixos (three-axis accelerometer)",
+   "tipo": "dispositivo",
+   "descricao": "LIS3DHTR, sensor de aceleração de três eixos introduzido no capítulo 2 de projetos intermediários.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "reconhecimento-continuo-de-acoes-continuous-activity-recogni": {
+   "nome": "reconhecimento contínuo de ações (continuous activity recognition)",
+   "tipo": "metodo",
+   "descricao": "Aplicação de TinyML construída com blocos de entrada Time Series Data no Edge Impulse, para reconhecer ações contínuas.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "impulse-edge-impulse": {
+   "nome": "impulse (Edge Impulse)",
+   "tipo": "metodo",
+   "descricao": "Pipeline no Edge Impulse composto por blocos de entrada, processamento e aprendizado.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "manutencao-preditiva-predictive-maintenance": {
+   "nome": "manutenção preditiva (predictive maintenance)",
+   "tipo": "conceito",
+   "descricao": "Aplicação de TinyML citada como exemplo de uso do reconhecimento de ações.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "classificacao-de-audio-audio-classification": {
+   "nome": "classificação de áudio (audio classification)",
+   "tipo": "metodo",
+   "descricao": "Classificação com ~70 amostras de 1 s por classe no capítulo de TinyML.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "classificacao-de-frutas-fruit-classification": {
+   "nome": "classificação de frutas (fruit classification)",
+   "tipo": "metodo",
+   "descricao": "Projeto de visão computacional com dataset do Kaggle comparando modelos de visão.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "deteccao-de-objetos-em-tempo-real-real-time-object-detection": {
+   "nome": "detecção de objetos em tempo real (real-time object detection)",
+   "tipo": "metodo",
+   "descricao": "Modelo com pré-processamento de 3 ms, inferência de 115 ms e pós-processamento de 1 ms.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "mobilenetv2": {
+   "nome": "MobileNetV2",
+   "tipo": "conceito",
+   "descricao": "Modelo avaliado na classificação de frutas com entrada 96x96, alpha 0,35 e latência de 219 ms.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "deep-sleep": {
+   "nome": "deep sleep",
+   "tipo": "grandeza",
+   "descricao": "Modo de baixo consumo do ESP32S3 Sense, citado com consumo de 14 μA.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "camera-ov2640": {
+   "nome": "câmera OV2640",
+   "tipo": "dispositivo",
+   "descricao": "Câmera de 1600x1200 usada nos projetos de visão computacional com XIAO ESP32S3 Sense.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "tempo-de-inferencia-inference-time": {
+   "nome": "tempo de inferência (inference time)",
+   "tipo": "metrica",
+   "descricao": "Componente do pipeline de detecção de objetos em tempo real, medido em 115 ms.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  "sensor-ecg-bitalino": {
+   "nome": "sensor ECG Bitalino",
+   "tipo": "dispositivo",
+   "descricao": "Sensor de eletrocardiograma usado no monitor de batimento cardíaco com XIAO nRF52840.",
+   "apelidos": [],
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
      "pagina": null
     }
    ]
@@ -4631,6 +6078,1117 @@
    "origens": [
     {
      "arquivo": "Winters Biomechanics and Motor Control of Human Movement (Stephen J. Thomas, Joseph A. Zeni etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "dado-sem-fio-de-baixo-consumo-ble",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "forca-de-sinal-rssi",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "forca-de-sinal-rssi",
+   "para": "perda-de-aquisicao",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "sincronizacao-por-interpolacao",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "modelo-fuzzy-mamdani",
+   "relacao": "alimenta",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "avaliacao-postural-rula",
+   "para": "modelo-fuzzy-mamdani",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "grupo-a",
+   "para": "modelo-fuzzy-mamdani",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modelo-fuzzy-mamdani",
+   "para": "risco-postural",
+   "relacao": "estima",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modelo-fuzzy-mamdani",
+   "para": "indice-kappa",
+   "relacao": "valida contra",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "voluntarios-saudaveis",
+   "para": "risco-postural",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "voluntarios-saudaveis",
+   "para": "avaliacao-postural-rula",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Computer Model Based on an Asynchronous BLE 5.0 IMU.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modulo-inercial-inertial-module",
+   "para": "giroscopio-3d-3d-gyroscope",
+   "relacao": "composto por",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modulo-inercial-inertial-module",
+   "para": "acelerometro-3d-3d-accelerometer",
+   "relacao": "composto por",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "memoria-fifo-fifo",
+   "para": "modulo-inercial-inertial-module",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "threshold-fifo-fth",
+   "para": "memoria-fifo-fifo",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "pedometro-pedometer",
+   "para": "acelerometro-3d-3d-accelerometer",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "absolute-wrist-tilt",
+   "para": "acelerometro-3d-3d-accelerometer",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "tap-detection",
+   "para": "acelerometro-3d-3d-accelerometer",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sensor-hub",
+   "para": "modulo-inercial-inertial-module",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "registrador-ctrl3-c",
+   "para": "comunicacao-i2c-fast-mode",
+   "relacao": "controla",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "registrador-ctrl3-c",
+   "para": "comunicacao-spi",
+   "relacao": "controla",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "saida-de-temperatura-temperature-output",
+   "para": "modulo-inercial-inertial-module",
+   "relacao": "composto por",
+   "origens": [
+    {
+     "arquivo": "Datasheet da LSM6DS3TR-C (STMicroelectronics).pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "aceleracao",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "velocidade-angular",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "microcontrolador-seeed-studio-xiao-nrf52840-sense",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sliding-window",
+   "para": "aceleracao",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "extracao-de-features-feature-extraction",
+   "para": "aceleracao",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "extracao-de-features-feature-extraction",
+   "para": "velocidade-angular",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "rede-neural-densa-dnn",
+   "para": "extracao-de-features-feature-extraction",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acuracia",
+   "para": "rede-neural-densa-dnn",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "going-downstairs-descer-escadas",
+   "para": "going-upstairs-subir-escadas",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "microcontrolador-seeed-studio-xiao-nrf52840-sense",
+   "para": "rede-neural-densa-dnn",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "stationary-parado",
+   "para": "walking-caminhar",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Gait_Recognition_Based_on_Tiny_ML_and_IMU_Sensors.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "intervalo-de-conexao-connection-interval",
+   "para": "consumo-de-energia",
+   "relacao": "causa",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "controlador",
+   "para": "host",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "host",
+   "para": "sistema-num-chip-soc",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "hierarquia-gatt",
+   "para": "handle",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "att-mtu",
+   "para": "l2cap",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "heart-rate-service-hrs",
+   "para": "hierarquia-gatt",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ibeacon",
+   "para": "sensortag",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "nrf51",
+   "para": "cc2541",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sensortag",
+   "para": "nrf51",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Bluetooth Low Energy Tools and Techniques for Low-Power Networkin.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "placa-xiao-nrf52840-sense-plus",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "microfone-pdm",
+   "para": "placa-xiao-nrf52840-sense-plus",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "pino-sa0",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "registrador-fs-xl",
+   "para": "faixa-de-escala-total-full-scale",
+   "relacao": "configura",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sensibilidade-do-sensor",
+   "para": "faixa-de-escala-total-full-scale",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "biblioteca-seeed-nrf52-mbed-enabled",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "divisor-de-tensao-da-bateria",
+   "para": "pino-p0-31",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "divisor-de-tensao-da-bateria",
+   "para": "pino-p0-31",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "chip-do-carregador-bq25101",
+   "para": "placa-xiao-nrf52840-sense-plus",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "Getting Started with Seeed Studio XIAO nRF52840 Series _ Seeed Studio Wiki.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "codigo-de-startup-cstart",
+   "para": "consumo-de-energia",
+   "relacao": "configura",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "custo-em-ciclos-de-interrupcao",
+   "para": "loop-com-sleep-entre-verificacoes-de-flags",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "implementacao-bit-a-bit-de-spi",
+   "para": "custo-em-ciclos-de-interrupcao",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "buffer-circular",
+   "para": "implementacao-bit-a-bit-de-spi",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "injecao-de-dependencia-dependency-injection",
+   "para": "padrao-factory",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "objeto-ativo-active-object",
+   "para": "padrao-factory",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acesso-desalinhado",
+   "para": "aviso-do-compilador",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ram-overlay",
+   "para": "buffer-circular",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "aproximacao-por-polinomios-e-series-de-taylor",
+   "para": "fake-float",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "calibracao-termica",
+   "para": "consumo-de-energia",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "consumo-de-energia",
+   "para": "loop-com-sleep-entre-verificacoes-de-flags",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "fake-float",
+   "para": "aproximacao-por-polinomios-e-series-de-taylor",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Making Embedded Systems Design Patterns for Great Software.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "intervalo-de-conexao-connection-interval",
+   "para": "consumo-de-energia",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "intervalo-de-conexao-connection-interval",
+   "para": "throughput",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "intervalo-de-advertising-advinterval",
+   "para": "latencia",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "latencia",
+   "para": "taxa-de-erro-de-bits-bit-error-rate-ber",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "nrf51822",
+   "para": "intervalo-de-conexao-connection-interval",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "bluenrg-ms",
+   "para": "intervalo-de-conexao-connection-interval",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "alcance",
+   "para": "bluetooth-de-baixo-energia-bluetooth-low-energy-ble",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "sincronizacao-de-nos",
+   "para": "latencia",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "Performance Evaluation of Bluetooth Low Energy: A Systematic Review.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "acelerometro-triaxial-triaxial-accelerometer",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acelerometro-triaxial-triaxial-accelerometer",
+   "para": "filtro-test-and-trace",
+   "relacao": "alimenta",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "filtro-test-and-trace",
+   "para": "limiar-de-confianca-threshold",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "arduino-nano-33-ble-sense",
+   "para": "acelerometro-triaxial-triaxial-accelerometer",
+   "relacao": "fornece",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "raspberry-pi-pico",
+   "para": "lstm",
+   "relacao": "executa",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "lstm",
+   "para": "mfcc",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "lstm",
+   "para": "quantizacao-em-8-bits-8-bit-quantization",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "ponto-fixo-q15",
+   "para": "quantizacao-em-8-bits-8-bit-quantization",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "mel-frequency-energy-mfe",
+   "para": "fft-plano-flat-fft-spectrogram",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "raspberry-pi-pico",
+   "para": "arduino-nano-33-ble-sense",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "TinyML Cookbook Combine machine learning with microcontrollers to solve real-world problems.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "controle-de-redundancia-ciclica-crc",
+   "para": "latencia",
+   "relacao": "causa",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "configuracao-otima-olcfg",
+   "para": "latencia",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "protocolo-esb-enhanced-shockburst",
+   "para": "modo-ble-bluetooth-low-energy",
+   "relacao": "compara com",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "protocolo-esb-enhanced-shockburst",
+   "para": "eficiencia-energetica",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "modo-dinamico-dynamic-protocol-mode",
+   "para": "latencia",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "payload-pre-construida-no-net-core",
+   "para": "latencia",
+   "relacao": "corrige",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "nrf5340",
+   "para": "fast-ramp-up",
+   "relacao": "limita",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "taxa-de-sucesso",
+   "para": "controle-de-redundancia-ciclica-crc",
+   "relacao": "depende de",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "protocolo-esb-enhanced-shockburst",
+   "para": "body-shadowing",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "Wireless Low-Latency Synchronization for Body-Worn Multi-Node Systems in Sports.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "unidade-de-medicao-inercial-imu",
+   "para": "reconhecimento-continuo-de-acoes-continuous-activity-recogni",
+   "relacao": "alimenta",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "impulse-edge-impulse",
+   "para": "reconhecimento-continuo-de-acoes-continuous-activity-recogni",
+   "relacao": "permite construir",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "reconhecimento-continuo-de-acoes-continuous-activity-recogni",
+   "para": "manutencao-preditiva-predictive-maintenance",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "acelerometro-de-tres-eixos-three-axis-accelerometer",
+   "para": "unidade-de-medicao-inercial-imu",
+   "relacao": "complementa",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "mobilenetv2",
+   "para": "classificacao-de-frutas-fruit-classification",
+   "relacao": "aplica-se a",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "latencia",
+   "para": "mobilenetv2",
+   "relacao": "mede",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "deteccao-de-objetos-em-tempo-real-real-time-object-detection",
+   "para": "tempo-de-inferencia-inference-time",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "camera-ov2640",
+   "para": "deteccao-de-objetos-em-tempo-real-real-time-object-detection",
+   "relacao": "alimenta",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "tempo-de-inferencia-inference-time",
+   "para": "latencia",
+   "relacao": "compõe",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "deep-sleep",
+   "para": "camera-ov2640",
+   "relacao": "complementa",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
+     "pagina": null
+    }
+   ]
+  },
+  {
+   "de": "classificacao-de-audio-audio-classification",
+   "para": "impulse-edge-impulse",
+   "relacao": "requer",
+   "origens": [
+    {
+     "arquivo": "XIAO–Big-Power,-Small-Board.pdf",
      "pagina": null
     }
    ]

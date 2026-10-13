@@ -144,7 +144,7 @@
 const $ = id => document.getElementById(id);
 const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const SILENCIO = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAIA+AAACABAAZGF0YQAAAAA=';
-const NOMES_BASE = {artigos:'Artigos', livros:'Livros e bibliografia'};
+const NOMES_BASE = {artigos:'Artigos', livros:'Livros e bibliografia', embarcados:'Embarcados'};
 let docs = [], porId = {}, aberto = null, blocos = [], atual = -1, tocando = false, vez = 0;
 let prontos = new Map(), historico = [], perguntando = false, vigia = null, recadoFixo = false;
 

@@ -1,8 +1,6 @@
 pymupdf
-numpy<2
-sentence-transformers==2.7.0
-transformers==4.41.2
-accelerate==0.31.0
+numpy
+sentence-transformers
 
 fastapi
 uvicorn

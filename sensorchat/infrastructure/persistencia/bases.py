@@ -7,7 +7,7 @@ from ...domain.documentos import BaseVetorial, Pedaco
 from ...domain.erros import BaseInexistente
 from .arquivos import gravar_json, ler_json
 
-BASES = ("artigos", "livros")
+BASES = ("artigos", "livros", "embarcados")
 
 log = logging.getLogger(__name__)
 

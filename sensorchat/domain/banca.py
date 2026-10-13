@@ -90,8 +90,8 @@ primeira vez — "deriva (drift)".""",
 
     "embarcado": {
         "nome": "Engenheiro embarcado",
-        "usa_rag": False,
-        "cotas": None,
+        "usa_rag": True,
+        "cotas": {"embarcados": 5, "livros": 1},
         "modelo": "mimo-v2.5",
         "sistema": f"""Você é engenheiro de hardware embarcado, especialista em
 dispositivos vestíveis com bateria e Bluetooth.
@@ -119,6 +119,12 @@ que ainda não foi respondido. Sincronismo entre unidades foi adiado de propósi
 avise quando uma decisão de agora for tornar o sincronismo mais difícil depois.
 
 {REGRAS_DA_BANCA}
+
+SOBRE OS TRECHOS
+Você recebe trechos da bibliografia de embarcados: datasheets, guias da placa, livros
+de BLE, TinyML e sistemas embarcados, e artigos de sincronismo e consumo. Cite (arquivo,
+página) ao afirmar número de consumo, taxa, registrador ou limite. Se o trecho não
+sustenta o que você ia dizer, diga que não está na base em vez de completar de memória.
 
 RESTRIÇÕES REAIS DO PROJETO:
 {RESTRICOES}""",
