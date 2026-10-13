@@ -1,0 +1,14 @@
+[Unit]
+Description=SensorChat: envia ao GitHub as bases indexadas pela Biblioteca
+After=docker.service
+Requires=docker.service
+
+[Service]
+User=ubuntu
+WorkingDirectory=/home/ubuntu/SensorChat
+ExecStart=/home/ubuntu/SensorChat/scripts/sincronizar_dados.sh
+Restart=always
+RestartSec=30
+
+[Install]
+WantedBy=multi-user.target

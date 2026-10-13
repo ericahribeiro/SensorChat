@@ -76,9 +76,10 @@ class TestBanca(BaseWeb):
         self.assertEqual(especialista["buscas"], [{"ferramenta": "buscar_na_base", "documentos": ["A1"],
                                                    "arquivos": [ARTIGO], "pergunta": "PUSH Band error",
                                                    "conceitos": []}])
-        self.assertNotIn("buscas", embarcado)
+        self.assertEqual(embarcado["autor"], "Engenheiro embarcado")
+        self.assertIn("buscas", embarcado)
 
-        primeira, segunda, terceira = self.modelo.chamadas
+        primeira, segunda, terceira, quarta = self.modelo.chamadas
         self.assertIn("CATÁLOGO DA BASE", primeira["mensagens"][0].conteudo)
         self.assertTrue(primeira["ferramentas"] and primeira["sem_raciocinio"])
         convite = primeira["mensagens"][1].conteudo
@@ -89,7 +90,9 @@ class TestBanca(BaseWeb):
         self.assertIn("TRECHOS DA SELEÇÃO", resultado.conteudo)
         self.assertIn("0.135", resultado.conteudo)
         self.assertEqual(terceira["modelo"], "mimo-v2.5")
-        self.assertFalse(terceira["ferramentas"])
+        self.assertIn("CATÁLOGO DA BASE", terceira["mensagens"][0].conteudo)
+        self.assertTrue(terceira["ferramentas"])
+        self.assertEqual(quarta["modelo"], "mimo-v2.5")
 
     def test_rodada_de_um_agente(self):
         self.assertEqual(self.cliente.post("/rodada?quem=arquiteto").json()["falaram"], ["arquiteto"])
@@ -171,8 +174,8 @@ class TestBiblioteca(BaseWeb):
         self.assertEqual([(d["id"], d["titulo"], d["tem_pdf"]) for d in dados["documentos"]],
                          [("A1", "clemente2021", False), ("A2", "velocidade2020", False), ("L1", "titterton", False)])
         self.assertEqual(dados["documentos"][0]["resumo"], "PUSH Band: SEE 0.135 m/s (p. 7).")
-        self.assertEqual(dados["pendentes"], {"artigos": [], "livros": []})
-        self.assertEqual(dados["bases"], ["artigos", "livros"])
+        self.assertEqual(dados["pendentes"], {"artigos": [], "livros": [], "embarcados": []})
+        self.assertEqual(dados["bases"], ["artigos", "livros", "embarcados"])
         self.assertIn("mimo_default", dados["vozes"])
 
     def test_ler_documento(self):
@@ -226,6 +229,9 @@ class TestBiblioteca(BaseWeb):
         estado = self.cliente.get("/biblioteca/atualizacao").json()
         self.assertEqual((estado["ocupada"], estado["erro"], estado["novos"]), (False, "", ["exemplo_imu.pdf"]))
         self.assertTrue(any("exemplo_imu.pdf" in linha for linha in estado["linhas"]))
+        aviso = self.raiz / "indexado.json"
+        self.assertEqual(json.loads(aviso.read_text(encoding="utf-8"))["novos"], ["exemplo_imu.pdf"])
+        aviso.unlink()
 
         estante = self.cliente.get("/biblioteca/documentos").json()
         novo = next(d for d in estante["documentos"] if d["arquivo"] == "exemplo_imu.pdf")
@@ -249,6 +255,7 @@ class TestBiblioteca(BaseWeb):
         self.cliente.post("/biblioteca/atualizar")
         self.container.atualizacao.aguardar(20)
         self.assertEqual(self.cliente.get("/biblioteca/atualizacao").json()["novos"], [])
+        self.assertFalse(aviso.exists())
 
     def test_uma_atualizacao_por_vez(self):
         import threading

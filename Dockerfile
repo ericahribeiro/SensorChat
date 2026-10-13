@@ -17,5 +17,5 @@ COPY sensorchat sensorchat
 COPY base_*.json base_*.npz catalogo.json extracoes.json grafo.json grafo.npz ./
 
 CMD ["sh", "-c", "mkdir -p /dados \
-    && cp base_*.json base_*.npz catalogo.json extracoes.json grafo.json grafo.npz /dados/ \
+    && cp -n base_*.json base_*.npz catalogo.json extracoes.json grafo.json grafo.npz /dados/ \
     && exec uvicorn sensorchat.interfaces.web.main:app --host 0.0.0.0 --port 8000 --proxy-headers"]

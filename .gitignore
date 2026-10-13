@@ -6,6 +6,9 @@ ata.json
 publico/
 pdfs_artigos/
 pdfs_livros/
-.env
+pdfs_embarcados/
 .claude
+.env
+tests/.claude
 audio/
+indexado*.json

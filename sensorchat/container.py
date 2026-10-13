@@ -15,6 +15,7 @@ from .infrastructure.fonte_pdf import FontePdfLocal
 from .infrastructure.modelo_openai import ModeloOpenAI
 from .infrastructure.persistencia.ata import RepositorioAtaEmArquivo
 from .infrastructure.persistencia.audio import RepositorioAudioEmArquivo
+from .infrastructure.persistencia.aviso import AvisoDeIndexacao
 from .infrastructure.persistencia.bases import RepositorioBasesEmArquivo
 from .infrastructure.persistencia.catalogo import RepositorioCatalogoEmArquivo
 from .infrastructure.persistencia.extracoes import RepositorioExtracoesEmArquivo
@@ -131,4 +132,5 @@ class Container:
 
     @cached_property
     def atualizacao(self):
-        return AtualizacaoEmSegundoPlano(self.atualizar, self.diario)
+        return AtualizacaoEmSegundoPlano(self.atualizar, self.diario,
+                                         AvisoDeIndexacao(self.raiz / "indexado.json"))

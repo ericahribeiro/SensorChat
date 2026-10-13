@@ -111,7 +111,8 @@ e não é gerado de novo. Se a Xiaomi não responder, a página segue com a voz 
 
 Os PDFs não vão para o repositório. Para incluir documentos novos:
 
-1. Coloque os PDFs em `pdfs_artigos/` ou `pdfs_livros/`.
+1. Coloque os PDFs em `pdfs_artigos/`, `pdfs_livros/` ou `pdfs_embarcados/` (bibliografia
+   consultada pelo Engenheiro embarcado na banca).
 2. Reindexe a base (`--mostrar` exibe exemplos do que foi descartado):
    ```bash
    python -m sensorchat indexar artigos
@@ -148,11 +149,56 @@ obtém e renova o certificado HTTPS sozinho. Precisa de um servidor Linux com **
    ```bash
    docker compose up -d --build
    ```
-   O site fica em `https://<DOMINIO>/` (banca) e `https://<DOMINIO>/tutor`.
+   O site fica em `https://<DOMINIO>/` (banca), `https://<DOMINIO>/tutor` e
+   `https://<DOMINIO>/biblioteca`.
 
-A ata da banca e o HTML publicado ficam no volume `dados` e sobrevivem a reinícios. Para
-atualizar depois de um `git pull` (código ou bases novas), rode o mesmo `docker compose up
--d --build`. Para ver os logs: `docker compose logs -f sensorchat`.
+Na **Oracle Cloud** (VM Ampere A1 com Ubuntu), as portas precisam ser abertas em dois
+lugares: nas *Ingress rules* da Security List da VCN (TCP 80 e 443) e no firewall da própria
+VM:
+
+```bash
+sudo iptables -I INPUT 6 -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 6 -p tcp --dport 443 -j ACCEPT
+sudo netfilter-persistent save
+```
+
+Tudo o que o servidor grava (bases, catálogo, grafo, PDFs enviados, ata, áudio) fica no
+volume `dados` e sobrevive a reinícios. As bases do repositório só são copiadas para o
+volume quando ainda não existem lá: depois disso, quem manda é o servidor, e um `git pull`
+com bases diferentes não substitui as que a Biblioteca indexou. Para atualizar o código,
+rode `git pull` e o mesmo `docker compose up -d --build`. Para ver os logs:
+`docker compose logs -f sensorchat`.
+
+### Enviar ao GitHub o que for indexado no servidor
+
+Ao fim de cada indexação com documentos novos, o SensorChat grava `indexado.json` no volume.
+O `scripts/sincronizar_dados.sh` vê esse aviso e, em até 30 s, copia as bases para o
+repositório, faz commit e push. No seu computador, basta um `git pull`.
+
+1. Crie uma chave no servidor e cadastre-a no GitHub em *Settings → Deploy keys* do
+   repositório, marcando **Allow write access**:
+   ```bash
+   ssh-keygen -t ed25519 -N "" -f ~/.ssh/sensorchat_deploy
+   cat ~/.ssh/sensorchat_deploy.pub
+   ```
+2. Na pasta do projeto, aponte o Git para a chave:
+   ```bash
+   git remote set-url origin git@github.com:ericahribeiro/SensorChat.git
+   git config core.sshCommand "ssh -i ~/.ssh/sensorchat_deploy -o IdentitiesOnly=yes"
+   git config user.name "SensorChat (servidor)"
+   git config user.email "servidor@sensorchat"
+   git pull   # confirma o acesso (aceite a impressão digital do GitHub)
+   ```
+3. Instale o serviço (ajuste `User` e os caminhos se o usuário não for `ubuntu`):
+   ```bash
+   sudo cp scripts/sensorchat-sincronizar.service /etc/systemd/system/
+   sudo systemctl enable --now sensorchat-sincronizar
+   journalctl -u sensorchat-sincronizar -f   # acompanha os envios
+   ```
+
+**Indexe só pelo servidor.** Os `.npz` são binários e o Git não junta duas versões
+diferentes: bases indexadas no seu computador e enviadas ao GitHub seriam sobrescritas pelo
+próximo envio do servidor. Código você altera normalmente.
 
 ## Arquitetura
 

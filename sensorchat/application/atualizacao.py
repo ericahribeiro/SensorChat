@@ -56,9 +56,10 @@ class AtualizarBiblioteca:
 
 
 class AtualizacaoEmSegundoPlano:
-    def __init__(self, atualizar, diario):
+    def __init__(self, atualizar, diario, ao_concluir=None):
         self._atualizar = atualizar
         self._diario = diario
+        self._ao_concluir = ao_concluir
         self._trava = threading.Lock()
         self._tarefa = None
         self._novos = []
@@ -88,6 +89,8 @@ class AtualizacaoEmSegundoPlano:
     def _rodar(self):
         try:
             self._novos = self._atualizar.executar()
+            if self._novos and self._ao_concluir:
+                self._ao_concluir(self._novos)
         except Exception as erro:
             log.exception("a atualização da biblioteca falhou")
             self._erro = str(erro) or type(erro).__name__
