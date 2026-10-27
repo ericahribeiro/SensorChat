@@ -5,7 +5,7 @@ from ..domain.grafo import GrafoConceitos, Origem
 from . import instrucoes
 from .json_modelo import ler_json
 
-MODELO = "mimo-v2.5"
+MODELO = "mimo-v2.6-flash"
 MAX_TOKENS = 1500
 SALVAR_A_CADA = 20
 LOTE_VETORIZACAO = 64

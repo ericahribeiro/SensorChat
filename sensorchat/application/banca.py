@@ -11,7 +11,7 @@ from ..domain.erros import BancaOcupada, FalaVazia, RespostaInvalida
 from .json_modelo import ler_json
 from .registro import cronometrar, resumir
 
-MODELO_RESUMIDOR = "mimo-v2.5"
+MODELO_RESUMIDOR = "mimo-v2.6-flash"
 MAX_TOKENS_FALA = 700
 MAX_TOKENS_RESUMO = 900
 LIMITE_ATA_RESUMO = 200

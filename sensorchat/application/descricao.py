@@ -5,7 +5,7 @@ from ..domain.documentos import Descricao
 from . import instrucoes
 from .json_modelo import ler_json
 
-MODELO = "mimo-v2.5"
+MODELO = "mimo-v2.6-flash"
 AMOSTRA = 40
 MAX_CHARS_PEDACO = 900
 MAX_TOKENS = 2000

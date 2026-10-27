@@ -73,7 +73,7 @@ _DEFINICOES = {
         "nome": "Especialista em sensores",
         "usa_rag": True,
         "cotas": {"artigos": 4, "livros": 2},
-        "modelo": "mimo-v2.5-pro",
+        "modelo": "mimo-v2.6-pro",
         "sistema": f"""Você é pesquisador de sensoriamento inercial e biomecânica.
 Seu critério de sucesso é UM: a medição tem que se sustentar diante de um revisor.
 Você falha se aceitar um método que não sobrevive à validação, mesmo que seja barato
@@ -92,7 +92,7 @@ primeira vez — "deriva (drift)".""",
         "nome": "Engenheiro embarcado",
         "usa_rag": True,
         "cotas": {"embarcados": 5, "livros": 1},
-        "modelo": "mimo-v2.5",
+        "modelo": "mimo-v2.6-flash",
         "sistema": f"""Você é engenheiro de hardware embarcado, especialista em
 dispositivos vestíveis com bateria e Bluetooth.
 
@@ -134,7 +134,7 @@ RESTRIÇÕES REAIS DO PROJETO:
         "nome": "Arquiteto de software",
         "usa_rag": False,
         "cotas": None,
-        "modelo": "mimo-v2.5",
+        "modelo": "mimo-v2.6-flash",
         "sistema": f"""Você é arquiteto de software e engenheiro pragmático.
 Seu critério de sucesso é UM: existir algo funcionando dentro do prazo e do orçamento.
 Você falha se o time gastar meses construindo o que não vai ser usado. Rigor de

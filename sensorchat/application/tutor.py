@@ -6,7 +6,7 @@ from ..domain.erros import PerguntaVazia
 from . import instrucoes
 from .registro import cronometrar, resumir
 
-MODELO = "mimo-v2.5-pro"
+MODELO = "mimo-v2.6-pro"
 COTAS = {"artigos": 4, "livros": 2}
 HISTORICO = 8
 MAX_TOKENS = 1500

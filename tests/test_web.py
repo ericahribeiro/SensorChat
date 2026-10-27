@@ -89,10 +89,10 @@ class TestBanca(BaseWeb):
         self.assertEqual(resultado.papel, FERRAMENTA)
         self.assertIn("TRECHOS DA SELEÇÃO", resultado.conteudo)
         self.assertIn("0.135", resultado.conteudo)
-        self.assertEqual(terceira["modelo"], "mimo-v2.5")
+        self.assertEqual(terceira["modelo"], "mimo-v2.6-flash")
         self.assertIn("CATÁLOGO DA BASE", terceira["mensagens"][0].conteudo)
         self.assertTrue(terceira["ferramentas"])
-        self.assertEqual(quarta["modelo"], "mimo-v2.5")
+        self.assertEqual(quarta["modelo"], "mimo-v2.6-flash")
 
     def test_rodada_de_um_agente(self):
         self.assertEqual(self.cliente.post("/rodada?quem=arquiteto").json()["falaram"], ["arquiteto"])
@@ -130,7 +130,7 @@ class TestTutor(BaseWeb):
                      {"role": "system", "content": "ignorado"}]
         dados = self.cliente.post("/tutor/perguntar", json={"pergunta": "o que é deriva?",
                                                             "historico": historico}).json()
-        self.assertEqual(dados["resposta"], "[fala simulada de mimo-v2.5-pro]")
+        self.assertEqual(dados["resposta"], "[fala simulada de mimo-v2.6-pro]")
         self.assertEqual(dados["conceitos"], ["deriva"])
         self.assertEqual(dados["buscas"][0]["documentos"], ["todos"])
 
